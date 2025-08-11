@@ -9,37 +9,6 @@
 
 
 
-    header{
-        width: 100%;
-        height: 15vh;
-        padding-left: 10%;
-        display: flex;
-        flex-direction: row;
-        
-        
-
-        .cabecalho{
-            display: flex;
-            width: 100%;
-            margin: 5px;
-            align-items: center;
-
-
-            .logo{
-                height: 80px;
-            }
-            
-            h1{
-            font-weight: 800px; /* Negrito forte */
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            width: fit-content;
-            max-width: 25%;
-            font-size: 25px;
-            }
-        }
-    }
 
     .container-image{
         background-image: url(./assets/images/freii.png);
@@ -75,7 +44,7 @@
                 font-family: "Archivo Black", sans-serif;
                 font-weight: 400;
                 font-style: normal;
-                font-size: 10vh;
+                font-size: 70px;
             
             }
 
@@ -83,6 +52,14 @@
                 width: 50%;
                 background-color: #ffa200;
                 height: 2vh;
+            }
+            hr{
+                display: flex;
+                width: 40%;
+                height: 15px;
+                background-color: #ffa200;
+                border-color: #ffa200;
+                padding: 10px;
             }
             
             h3{
@@ -106,9 +83,7 @@
                 background-color: rgba(255, 72, 0, 0.699);
                 font-family: Arial, Helvetica, sans-serif;
                 cursor: pointer;
-                
-                
-                
+        
             }
         }
 
@@ -139,6 +114,7 @@
         font-size: 40px;
         justify-content: center;
         font-family: Arial, Helvetica, sans-serif;
+        margin: 40px 0px;
     }
 
     .carrosel{
@@ -152,6 +128,7 @@
         margin-top: 10px;
         gap: 10px;
         padding: 10px;
+        font-family: Arial, Helvetica, sans-serif;
 
 
         .carta_curso{
@@ -164,35 +141,17 @@
             border-radius: 15px;
             text-align: center;
             align-items: center;
-            gap: 20px;
+            gap: 30px;
             padding: 5px;
             border: 2px solid #A9CCE3;
 
             img{
-                height: 50px;
+                height: 150px;
                 background-color: #FDFEFE;
                 border-radius: 100%;
             }
-            .apresenta{
-                width: 100%;
-                color: #2E4053;
-                display: flex;
-                max-height: 7vh;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .descri{
-                width: 100%;
-                height: auto;
-                display: flex;
-                text-align: center;
-                justify-content: center;
-                margin-left: 5px;
-                margin-right: 5px;
-                color: #2E4053;
-            }
+            
+           
 
             
         }
