@@ -117,50 +117,88 @@
         margin: 40px 0px;
     }
 
+
+    
+
+    
+
     .carrosel{
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
-        height: 65vh;
-        flex-wrap: wrap;
+        height: 50vh;
         background-color: #D6EAF8;
         margin-top: 10px;
         gap: 10px;
         padding: 10px;
         font-family: Arial, Helvetica, sans-serif;
-
-
-        .carta_curso{
-            width: 20%;
-            height: 30vh;
-            background-color:  #EAF2F8;
-            color: #000000;
-            display: flex;
-            flex-direction: column;
-            border-radius: 15px;
-            text-align: center;
-            align-items: center;
-            gap: 30px;
-            padding: 5px;
-            border: 2px solid #A9CCE3;
-
-            img{
-                height: 150px;
-                background-color: #FDFEFE;
-                border-radius: 100%;
-            }
-            
-           
-
-            
-        }
-      
         
         
-    }
+
+  .swiper {
+    padding-bottom: 8vh;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;          
+    padding: 10px;         
+    background: #f9f9f9;   
+    border: 1PX solid rgba(53, 96, 153, 0.582);
+    border-radius: 8px;    
+    box-shadow: 0 2px 90px rgba(0,0,0,0.1);
+    cursor:grab;
     
+}
+
+.slide-item {
+       width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+    
+}
+
+.slide-item:hover {
+    transform: scale(1.05);
+}
+
+.swiper-slide:active {
+    cursor: grabbing;
+}
+
+.slide-text {
+    color: #23458B;
+    text-align: center;
+    margin-top: 0.5rem;
+
+    h1 {
+        font-size: 3vh;
+        margin-bottom: 0.2rem;
     }
 
+    h3 {
+        font-size: 2vh;
+        font-weight: normal;
+    }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    
+    display: none !important;
+    color: black;
+}
+
+.swiper-pagination-bullet {
+    background: #303261;
+}
+    
+}
+    
+}
 
 }

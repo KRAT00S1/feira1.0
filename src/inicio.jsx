@@ -1,5 +1,12 @@
 import { Link } from 'react-router'
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Navigation } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
 
 
 import './inicio.scss'
@@ -16,6 +23,16 @@ import carro from './assets/images/carro.png'
 import anpul from './assets/images/ampulheta.png'
 
 export default function Inicio() {
+
+        const data = [
+        { id: '1', image: ingles, text: <div><h1>INGLES</h1><h3>Intermediario e avançado</h3></div> },
+        { id: '2', image: info, text: <div><h1>INFORMÁTICA</h1><h3>Basico e avançado</h3></div> },
+        { id: '3', image: eletro, text: <div><h1>ELETRICA</h1><h3>Eletricista Instalador</h3></div> },
+        { id: '4', image: olho, text: <div><h1>COMUNICAÇÃO VISUAL</h1><h3>Design intuitivo</h3></div> },
+        { id: '5', image: carro, text: <div><h1>ELETRÔNICA DE CARROS</h1><h3>Estetica automotiva</h3></div> },
+        { id: '5', image: anpul, text: <div><h1>ADMINISTRAÇÃO</h1><h3>Gestão administrativa</h3></div> }
+    ]
+    
 
   
     return (
@@ -54,59 +71,35 @@ export default function Inicio() {
             </main>
 
             <h2>Cursos Participantes</h2>
-
+            
             <div className="carrosel">
 
-                 <div className="carta_curso">
-                
-                    <img src={ingles} className="img_curso"/>
-                    <h3>Inglês intermediário e avançado</h3>
-                
-                
-            </div>
-
-            <div className="carta_curso">
-                
-                    <img src={info} className="img_curso"/>
-                    <h3>Informática básica e avançada</h3>
-                
-               
-            </div>
-
-            <div className="carta_curso">
-                
-                    <img src={olho} className="img_curso"/>
-                    <h3>Comunicação visual</h3>
-                
-               
-            </div>
-
-            <div className="carta_curso">
-                
-                    <img src={anpul} className="img_curso"/>
-                    <h3>Administração</h3>
-                
-              
-            </div>
-
-            <div className="carta_curso">
-                
-                    <img src={carro} className="img_curso"/>
-                    <h3>Eletromecânica de Autos</h3>
-                
-                
-            </div>
-
-            <div className="carta_curso">
-                
-                    <img src={eletro} className="img_curso"/>
-                    <h3>Eletricista Instalador</h3>
-                
-              
-            </div>
-         
+                        <Swiper
+                    modules={[Pagination, Navigation]}
+                    pagination={{ clickable: true }}
+                    navigation
+                    loop={true}
+                    spaceBetween={10}
+                    slidesPerView={4}
+                >
+                    {data.map((item) => (
+                        <SwiperSlide key={item.id}>
+                            <img
+                                src={item.image}
+                                alt={`Tecnologia ${item.id}`}
+                                className="slide-item"
+                            />
+                            <div className="slide-text">
+                                {item.text}
+                            </div>
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            
 
             </div>
+            
+        
         </div>
     )
 }
