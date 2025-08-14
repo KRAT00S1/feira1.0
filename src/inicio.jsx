@@ -80,7 +80,7 @@ export default function Inicio() {
                     navigation
                     loop={true}
                     spaceBetween={10}
-                    slidesPerView={4}
+                    slidesPerView={3}
                 >
                     {data.map((item) => (
                         <SwiperSlide key={item.id}>
