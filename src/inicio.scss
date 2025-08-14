@@ -7,6 +7,39 @@
     body{
         background-color: rgb(45, 48, 81);
 
+        header{
+        width: 100%;
+        height: 15vh;
+        padding-left: 10%;
+        display: flex;
+        flex-direction: row;
+        
+        
+
+        .cabecalho{
+            display: flex;
+            width: 100%;
+            margin: 5px;
+            align-items: center;
+
+
+            .logo{
+                height: 80px;
+            }
+            
+            h1{
+            font-weight: 800px; /* Negrito forte */
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            width: fit-content;
+            max-width: 25%;
+            font-size: 25px;
+            }
+        }
+    }
+        
+
 
 
 
@@ -67,7 +100,8 @@
                 
             }
 
-            button{
+            .inscricao{
+                text-decoration: none;
                 margin-top: 30px;
                 width: 50%;
                 padding: 15px;

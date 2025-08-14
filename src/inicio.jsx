@@ -58,7 +58,7 @@ export default function Inicio() {
                         <hr />
                         
                         <h3>Esforço que  transforma, e o <br />orgulho permanece.</h3>
-                        <button>GARANTA SUA INSCRIÇÃO</button>
+                        <Link to={'/cadastro'} className='inscricao'>GARANTA SUA INSCRIÇÃO</Link>
                     </div>
 
                     <div className="imagem2 ">
