@@ -1,16 +1,9 @@
 import { Link } from 'react-router'
 
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination, Navigation } from 'swiper/modules';
-
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-
 
 
 import './inicio.scss'
-import './index.scss'
+
 
 
 import logo from './assets/images/logo.png'
@@ -24,28 +17,19 @@ import anpul from './assets/images/ampulheta.png'
 
 export default function Inicio() {
 
-        const data = [
-        { id: '1', image: ingles, text: <div><h1>INGLES</h1><h3>Intermediario e avançado</h3></div> },
-        { id: '2', image: info, text: <div><h1>INFORMÁTICA</h1><h3>Basico e avançado</h3></div> },
-        { id: '3', image: eletro, text: <div><h1>ELETRICA</h1><h3>Eletricista Instalador</h3></div> },
-        { id: '4', image: olho, text: <div><h1>COMUNICAÇÃO VISUAL</h1><h3>Design intuitivo</h3></div> },
-        { id: '5', image: carro, text: <div><h1>ELETRÔNICA DE CARROS</h1><h3>Estetica automotiva</h3></div> },
-        { id: '5', image: anpul, text: <div><h1>ADMINISTRAÇÃO</h1><h3>Gestão administrativa</h3></div> }
-    ]
     
-
-  
-    return (
+     return (
         <div>
             <header>
                 <div className="cabecalho">
+
+                  <div className="principal">
                     <img src={logo} className='logo' />
                     <h1>Instituto Nóssa Senhora de Fátima</h1>
-
+                    </div>
+                <Link to={'/cadastro'} className='inscricao'>INSCREVA-SE</Link>
                 </div>
-                <div className="link">
-
-                </div>
+               
             </header>
 
             <main>
@@ -74,30 +58,125 @@ export default function Inicio() {
             
             <div className="carrosel">
 
-                        <Swiper
-                    modules={[Pagination, Navigation]}
-                    pagination={{ clickable: true }}
-                    navigation
-                    loop={true}
-                    spaceBetween={10}
-                    slidesPerView={4}
-                >
-                    {data.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <img
-                                src={item.image}
-                                alt={`Tecnologia ${item.id}`}
-                                className="slide-item"
-                            />
-                            <div className="slide-text">
-                                {item.text}
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            
+
+                    <div className="curso-card">
+          <img src={ingles} alt="Curso de Inglês" className="card-image" />
+          
+            <h3>INGLÊS</h3>
+            <p>Intermediário e avançado</p>
+          
+        </div>
+
+             <div className="curso-card">
+          <img src={info} alt="Curso de Informática" className="card-image" />
+          
+            <h3>INFORMÁTICA</h3>
+            <p>Básico e avançado</p>
+          
+        </div>
+
+        {/* Card 3 - Elétrica */}
+        <div className="curso-card">
+          <img src={eletro} alt="Curso de Elétrica" className="card-image" />
+          
+            <h3>ELÉTRICA</h3>
+            <p>Eletricista Instalador</p>
+          
+        </div>
+
+        {/* Card 4 - Comunicação Visual */}
+        <div className="curso-card">
+          <img src={olho} alt="Curso de Comunicação Visual" className="card-image" />
+          
+            <h3>COMUNICAÇÃO VISUAL</h3>
+            <p>Design intuitivo</p>
+          
+        </div>
+
+        {/* Card 5 - Eletrônica de Carros */}
+        <div className="curso-card">
+          <img src={carro} alt="Curso de Eletrônica Automotiva" className="card-image" />
+          
+            <h3>ELETRÔNICA DE CARROS</h3>
+            <p>Estética automotiva</p>
+          
+        </div>
+
+        {/* Card 6 - Administração */}
+        <div className="curso-card">
+          <img src={anpul} alt="Curso de Administração" className="card-image" />
+          
+            <h3>ADMINISTRAÇÃO</h3>
+            <p>Gestão administrativa</p>
+          
+        </div>
 
             </div>
+
+
+
+            
+
+          <div className="caixa_andar"> 
+            <h1>PATIO</h1>
+
+
+            <div className="informacao_andar">
+
+          <div className="caixa_texto">
+
+           <h3><strong>Estandes de empresas convidadas</strong></h3>
+            
+              
+                <ul>
+                  <li>Casa da Mulher Paulistana</li>
+                  <li>Conexão Bem Maior</li>
+                  <li>Óticas Carol</li>
+                  <li>STB</li>
+                </ul>
+              
+              <h3><strong>Demais estandes</strong></h3>
+                
+                  
+                    <ul>
+                      <li><strong>CEDESP AVE MARIA</strong></li>
+                      <li>Metalmecânica – Ajustador e Torneiro Mecânico</li>
+                      <li>Tecnologia de Redes e Manutenção de Computadores</li>
+                    </ul>
+                  <ul>
+                  <li>Troca de Livros</li>
+                  <li>Oficina de Eletromecânica de Autos</li>
+                  <li>Oficina de Auto Elétrica</li>
+                  <li>Oficina Eletrotécnica</li>
+                  <li>Livros do Frei</li>
+                  <li>Produtos da Padaria do Frei – doces e salgados</li>
+                  <li>Pastel e bebidas (embaixo da escada)</li>
+                </ul>
+
+                <h3> <strong>Sala</strong></h3>
+
+                <ul>
+              <li><strong>SALA 4:</strong> Óticas Carol</li>
+              <li><strong>SALA 5:</strong> Caixa</li>
+              <li><strong>SALA 6:</strong> Inglês</li>
+            </ul>
+
+                
+                
+            </div>
+          <img src="" alt="" className="atividade_andar" />
+
+            </div>
+          </div>
+          
+
+          
+
+
+
+
+
+            
             
         
         </div>

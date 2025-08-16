@@ -1,238 +1,240 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
 
+body {
+    background-color: rgb(45, 48, 81);
+}
 
-    body{
-        background-color: rgb(45, 48, 81);
+/* HEADER */
+header {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
 
-        header{
-        width: 100%;
-        height: 15vh;
-        padding-left: 10%;
+    .cabecalho {
         display: flex;
-        flex-direction: row;
-        
-        
+        width: 100%;
+        justify-content: space-between;
+        margin: 5px;
+        align-items: center;
 
-        .cabecalho{
+        .principal {
             display: flex;
-            width: 100%;
-            margin: 5px;
             align-items: center;
+            width: 40%;
+            height: 15vh;
 
-
-            .logo{
+            .logo {
                 height: 80px;
             }
-            
-            h1{
-            font-weight: 800px; /* Negrito forte */
-            color: #ffffff;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            width: fit-content;
-            max-width: 25%;
-            font-size: 25px;
+
+            h1 {
+                font-weight: 800;
+                color: #ffffff;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                width: fit-content;
+                max-width: 60%;
+                font-size: 25px;
             }
         }
-    }
-        
 
-
-
-
-    .container-image{
-        background-image: url(./assets/images/freii.png);
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 70px;
-        background-size:cover;
-        background-position: center;  
-        background-repeat: no-repeat;
-
-
-        .Container-informacao{
-            font-size: 40px;
-            width: 50%;
-            height: 40vh;
+        .inscricao {
+            text-decoration: none;
+            width: 20%;
+            padding: 15px;
             display: flex;
-            flex-direction: column;
-            gap: 10px;
-            opacity: 200%;
-            position: relative;
-            color: rgb(255, 255, 255);
+            font-size: 20px;
+            align-items: center;
             justify-content: center;
-            
-            
-            
-
-            h1{
-                margin-top: 30PX;
-                width: 100%;
-                font-family: "Archivo Black", sans-serif;
-                font-weight: 400;
-                font-style: normal;
-                font-size: 70px;
-            
-            }
-
-            .sla{
-                width: 50%;
-                background-color: #ffa200;
-                height: 2vh;
-            }
-            hr{
-                display: flex;
-                width: 40%;
-                height: 15px;
-                background-color: #ffa200;
-                border-color: #ffa200;
-                padding: 10px;
-            }
-            
-            h3{
-                font-size: 40px;
-                
-            }
-
-            .inscricao{
-                text-decoration: none;
-                margin-top: 30px;
-                width: 50%;
-                padding: 15px;
-                display: flex;
-                font-size: 20px;
-                align-items: center;
-                justify-content: center;
-                margin-left: 20%;
-                border: none;
-                border-radius: 40px;
-                font-weight: bolder;
-                color: white;
-                background-color: rgba(255, 72, 0, 0.699);
-                font-family: Arial, Helvetica, sans-serif;
-                cursor: pointer;
-        
-            }
+            border-radius: 40px;
+            font-weight: bolder;
+            color: white;
+            background-color: rgba(255, 72, 0, 0.699);
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
         }
-
-        .imagem2{
-            width: 30%;
-            height: 70vh;
-            justify-content: center;            
-            display: flex;
-            padding: 10px;
- 
-                
-            img{
-                
-                height: 65vh;
-                
-         
-            }
-            
-        
-        }
-
     }
-
-    h2{
-        margin-top: 10px;
-        display: flex;
-        color: #F5BA53;
-        font-size: 40px;
-        justify-content: center;
-        font-family: Arial, Helvetica, sans-serif;
-        margin: 40px 0px;
-    }
-
-
-    
-
-    
-
-    .carrosel{
-        display: flex;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-        height: 50vh;
-        background-color: #D6EAF8;
-        margin-top: 10px;
-        gap: 10px;
-        padding: 10px;
-        font-family: Arial, Helvetica, sans-serif;
-        
-        
-
-  .swiper {
-    padding-bottom: 8vh;
 }
 
-.swiper-slide {
+/* CONTAINER IMAGE */
+.container-image {
+    background-image: url(./assets/images/freii.png);
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    .Container-informacao {
+        font-size: 40px;
+        width: 50%;
+        height: 40vh;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        opacity: 1;
+        position: relative;
+        color: rgb(255, 255, 255);
+        justify-content: center;
+
+        h1 {
+            margin-top: 30px;
+            width: 100%;
+            font-family: "Archivo Black", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 70px;
+            text-shadow: -3px 1px black;
+        }
+
+        hr {
+            width: 40%;
+            height: 15px;
+            background-color: #ffa200;
+            border-color: #ffa200;
+            padding: 10px;
+        }
+
+        h3 {
+            font-size: 40px;
+            text-shadow: -3px 1px black;
+        }
+
+        .inscricao {
+            text-decoration: none;
+            margin-top: 30px;
+            width: 50%;
+            padding: 15px;
+            display: flex;
+            font-size: 20px;
+            align-items: center;
+            justify-content: center;
+            margin-left: 20%;
+            border: none;
+            border-radius: 40px;
+            font-weight: bolder;
+            color: white;
+            background-color: rgba(255, 72, 0, 0.699);
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: pointer;
+        }
+    }
+
+    .imagem2 {
+        width: 30%;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+
+        img {
+            height: 65vh;
+        }
+    }
+}
+
+/* TITULO SECAO */
+h2 {
+    margin-top: 10px;
+    display: flex;
+    color: #ffa200;
+    font-size: 40px;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px 0px;
+}
+
+/* CARROSEL */
+.carrosel {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-color: #d6eaf8;
+    margin-top: 10px;
+    gap: 10px;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    flex-wrap: wrap;
+
+    .curso-card {
+        padding: 10px;
+        width: 20%;
+        background: #e6f2ff;
+        text-align: center;
+        border: 1px solid #0057b3a1;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #003366;
+    }
+}
+
+/* CAIXA ANDAR */
+.caixa_andar {
+    width: 100%;
+    margin-top: 30px;
+    height: 90vh;
+    background-color: aqua;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: 180px;          
-    padding: 10px;         
-    background: #f9f9f9;   
-    border: 1PX solid rgba(53, 96, 153, 0.582);
-    border-radius: 8px;    
-    box-shadow: 0 2px 90px rgba(0,0,0,0.1);
-    cursor:grab;
-    
-}
-
-.slide-item {
-       width: 120px;
-    height: 120px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    
-}
-
-.slide-item:hover {
-    transform: scale(1.05);
-}
-
-.swiper-slide:active {
-    cursor: grabbing;
-}
-
-.slide-text {
-    color: #23458B;
-    text-align: center;
-    margin-top: 0.5rem;
 
     h1 {
-        font-size: 3vh;
-        margin-bottom: 0.2rem;
+        color: #d6eaf8;
+        justify-content: center;
+        width: 100%;
+        display: flex;
     }
 
-    h3 {
-        font-size: 2vh;
-        font-weight: normal;
+    .informacao_andar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        height: 90vh;
+        background-color: #ffa200;
+
+        .caixa_texto {
+            display: flex;
+            width: 50%;
+            height: 90vh;
+            background-color: rgb(55, 155, 243);
+            flex-direction: column;
+
+            ul {
+                margin-left: 70px;
+            }
+
+            h3 {
+                font-family: Arial, Helvetica, sans-serif;
+                display: flex;
+                width: 100%;
+                margin: 20px 0px;
+                justify-content: center;
+            }
+        }
+
+        .atividade_andar {
+            width: 50%;
+            height: 90vh;
+            display: flex;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-image: url(./assets/images/freii.png);
+        }
     }
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    
-    display: none !important;
-    color: black;
-}
 
-.swiper-pagination-bullet {
-    background: #303261;
-}
-    
-}
-    
-}
-
-}
