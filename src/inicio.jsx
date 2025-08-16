@@ -9,6 +9,7 @@ import eletro from './assets/images/eletro.png';
 import olho from './assets/images/icon_olho.png';
 import carro from './assets/images/carro.png';
 import anpul from './assets/images/ampulheta.png';
+import predio from './assets/images/predio.png'
 
 export default function Inicio() {
   return (
@@ -144,9 +145,46 @@ export default function Inicio() {
             </ul>
           </div>
 
-          <img src="" alt="" className="atividae_nadar" />
+          <img src={predio} alt="" className="atividade_andar" />
         </div>
       </section>
+
+
+          <section className="caixa_andar123">
+          <h1>PÁTIO</h1>
+          <div className="informacao_andar123">
+          <div className="caixa_texto123">
+
+            <h3>1° ANDAR</h3>
+          <ul>
+            <li>SALA 18 – ADMINISTRAÇÃO: Empreendedorismo e Logística</li>
+            <li>SALA 19 – CREAS</li>
+            <li>SALA 20 – ADMINISTRAÇÃO: Recursos Humanos, Contabilidade e Documentos Técnicos</li>
+          </ul>
+
+          <h3>2° ANDAR</h3>
+          <ul>
+            <li>SALA 24 – Comunicação Visual: Corel Draw, Photoshop e Caricaturas</li>
+            <li>SALA 25 – Informática: montagem, configuração e redes</li>
+            <li>SALA 26 – Informática: programação</li>
+            <li>SALA 27 – Elaboração de currículo</li>
+          </ul>
+
+          <h3>3° ANDAR</h3>
+          <h3>AUDITÓRIO</h3>
+          <ul>
+            <li>Simulação de entrevista de emprego</li>
+            <li>Oficina de Linkedin</li>
+          </ul>
+
+          </div>
+
+          <img src={predio} alt="" className="atividade_andar123" />
+          </div>
+</section>
+
+
+      
     </div>
   );
 }
