@@ -120,14 +120,11 @@ export default function Inicio() {
           <div className="caixa_andar"> 
             <h1>PATIO</h1>
 
-
-            <div className="informacao_andar">
-
           <div className="caixa_texto">
 
-           <h3><strong>Estandes de empresas convidadas</strong></h3>
-            
-              
+           
+            <ul>
+              <li><strong>Estandes de empresas convidadas</strong></li>
                 <ul>
                   <li>Casa da Mulher Paulistana</li>
                   <li>Conexão Bem Maior</li>
@@ -137,9 +134,8 @@ export default function Inicio() {
               
               <h3><strong>Demais estandes</strong></h3>
                 
-                  
+                  <li><strong>CEDESP AVE MARIA</strong></li>
                     <ul>
-                      <li><strong>CEDESP AVE MARIA</strong></li>
                       <li>Metalmecânica – Ajustador e Torneiro Mecânico</li>
                       <li>Tecnologia de Redes e Manutenção de Computadores</li>
                     </ul>
@@ -152,25 +148,13 @@ export default function Inicio() {
                   <li>Produtos da Padaria do Frei – doces e salgados</li>
                   <li>Pastel e bebidas (embaixo da escada)</li>
                 </ul>
-
-                <h3> <strong>Sala</strong></h3>
-
-                <ul>
-              <li><strong>SALA 4:</strong> Óticas Carol</li>
-              <li><strong>SALA 5:</strong> Caixa</li>
-              <li><strong>SALA 6:</strong> Inglês</li>
-            </ul>
-
                 
-                
+                </ul>
             </div>
-          <img src="" alt="" className="atividade_andar" />
+          <img src="" alt="" className="atividae_nadar" />
 
-            </div>
+
           </div>
-          
-
-          
 
 
 
