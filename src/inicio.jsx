@@ -9,7 +9,15 @@ import eletro from './assets/images/eletro.png';
 import olho from './assets/images/icon_olho.png';
 import carro from './assets/images/carro.png';
 import anpul from './assets/images/ampulheta.png';
-import predio from './assets/images/predio.png'
+import predio from './assets/images/predio.png';
+import catalogo from './assets/images/andar123.png';
+import frei from './assets/images/vemprofrei.png'
+
+
+
+
+
+
 
 export default function Inicio() {
   return (
@@ -52,7 +60,7 @@ export default function Inicio() {
 
       {/* CURSOS */}
       <section>
-        <h2>Cursos Participantes</h2>
+        <h2 className='informacao_secao' >Cursos Participantes</h2>
         <div className="carrosel">
           {/* Card 1 - Inglês */}
           <div className="curso-card">
@@ -98,11 +106,14 @@ export default function Inicio() {
         </div>
       </section>
 
+
+      <h2 className='informacao_secao'>PROGRAMAÇÃO 5ª FEIRA DE PROFISSÕES</h2>
       
       <section className="caixa_andar">
-        <h1>PÁTIO</h1>
+        
         <div className="informacao_andar">
           <div className="caixa_texto">
+            <h1>PÁTIO</h1>
             <h3>
               <strong>Estandes de empresas convidadas</strong>
             </h3>
@@ -151,9 +162,10 @@ export default function Inicio() {
 
 
           <section className="caixa_andar123">
-          <h1>PÁTIO</h1>
+          
           <div className="informacao_andar123">
           <div className="caixa_texto123">
+            <h1>ATRAÇÕES PRESENTES</h1>
 
             <h3>1° ANDAR</h3>
           <ul>
@@ -170,8 +182,8 @@ export default function Inicio() {
             <li>SALA 27 – Elaboração de currículo</li>
           </ul>
 
-          <h3>3° ANDAR</h3>
-          <h3>AUDITÓRIO</h3>
+          <h3>3° ANDAR/AUDITÓRIO</h3>
+          
           <ul>
             <li>Simulação de entrevista de emprego</li>
             <li>Oficina de Linkedin</li>
@@ -179,9 +191,53 @@ export default function Inicio() {
 
           </div>
 
-          <img src={predio} alt="" className="atividade_andar123" />
+          <img src={catalogo} alt="" className="atividade_andar123" />
           </div>
 </section>
+
+
+<footer className="contatos">
+<div className="caixa_instituto">
+<img src={logo} alt="" />
+<h2>Instito Nossa Senhora <br/> de Fatima</h2>
+
+</div>
+<hr/>
+<div className="caixa_loc">
+
+  <h4>LOCALIZAÇÃO</h4>
+
+  <p>Instituto Social Nossa Senhora de Fátima
+Av. Cel. Octaviano de Freitas Costa, 463 
+Veleiros - São Paulo - SP 04773-000</p>
+
+
+
+</div>
+<hr/>
+<div className="redes_sociais">
+
+  <p>(11) 3798-5037 - secretaria<br/>
+(11) 96398-6252 - secretaria - whatsapp</p>
+
+<div className="link_contatos">
+<a href="">adm@acaonsfatima.org.br</a>
+<a href="">secretaria@acaonsfatima.org.br</a>
+</div>
+
+
+
+
+</div>
+
+
+
+</footer>
+
+<footer>
+<img src={frei} alt="" className='imagem_frei'/>
+</footer>
+
 
 
       

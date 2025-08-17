@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(45, 48, 81);
+    background-color: rgb(108, 116, 202);
 }
 
 /* HEADER */
@@ -48,7 +48,7 @@ header {
             text-decoration: none;
             width: 20%;
             padding: 15px;
-            display: flex;
+            display: none;
             font-size: 20px;
             align-items: center;
             justify-content: center;
@@ -146,14 +146,14 @@ header {
 }
 
 /* TITULO SECAO */
-h2 {
+.informacao_secao {
     margin-top: 10px;
     display: flex;
     color: #ffa200;
     font-size: 40px;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
-    margin: 40px 0px;
+    margin: 100px 0px;
 }
 
 /* CARROSEL */
@@ -163,7 +163,7 @@ h2 {
     justify-content: center;
     align-items: center;
     height: 70vh;
-    background-color: #d6eaf8;
+    background-color: #EAF3FE;
     margin-top: 10px;
     gap: 10px;
     padding: 10px;
@@ -173,7 +173,7 @@ h2 {
     .curso-card {
         padding: 10px;
         width: 20%;
-        background: #e6f2ff;
+        background: #e6f2ff96;
         text-align: center;
         border: 1px solid #0057b3a1;
         border-radius: 10px;
@@ -190,7 +190,7 @@ h2 {
     width: 100%;
     margin-top: 90px;
     height: 90vh;
-    background-color: #e5b90a;
+    background:linear-gradient(to top,#C8E0FE,#c8e0fe69) ;
     display: flex;
     flex-direction: column;
 
@@ -198,7 +198,8 @@ h2 {
     h1 {
         color: #ffffff;
         justify-content: center;
-        width: 60%;
+        width: 100%;
+        margin: 5px 0;
         display: flex;
         
     }
@@ -240,7 +241,6 @@ h2 {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            margin-top: -27px;
             box-shadow: 0 1px black;
             border-radius: 5px 0 0 5px;
         }
@@ -253,7 +253,7 @@ h2 {
     width: 100%;
     margin-top: 90px;
     height: 90vh;
-    background-color: #e5b90a;
+    background:linear-gradient(to bottom,#C8E0FE,#c8e0fe69) ;
     display: flex;
     flex-direction: column;
 
@@ -261,8 +261,11 @@ h2 {
     h1 {
         color: #ffffff;
         justify-content: center;
-        width: 60%;
+        width: 100%;
+        margin: 5px 0;
         display: flex;
+        
+
         
     }
 
@@ -283,7 +286,7 @@ h2 {
 
             ul {
                 margin-left: 70px;
-                color: #ffffff;
+                color: #fffefe;
             }
 
             h3 {
@@ -303,14 +306,325 @@ h2 {
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            margin-top: -27px;
             box-shadow: 0 1px black;
             border-radius: 5px 0 0 5px;
         }
     }
 }
 
+hr{
+    display: flex;
+    align-items: center;
+    height: 150px;
+    border:none;
+    padding: 1px;
+    background-color: black;
+
+
+}
+.contatos{
+    margin-top: 100px;
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(to left, #f5c33b, #f9d976);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2c2f48;
+
+
+    .caixa_instituto{
+        width: 30%;
+        display: flex;
+        height: 40vh;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        
+        
+        img{
+            width: 100px;
+            height: 100px;
+        }
+        h2{
+            font-size: 20px;
+            color:#2c2f48;
+        }
+
+        
+
+    }
+
+    .caixa_loc{
+        width: 20%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 30px;
+
+        h4{
+            font-weight: 800;
+        }
+
+
+    }
+
+    .redes_sociais{
+        width: 30%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        justify-content: flex-start;
+        align-items: flex-start;
+        
+        
+        gap: 30px;
+
+        .link_contatos{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            a{
+                text-decoration: none;
+                color: #2c2f48;
+            }
+        }
+
+    }
+}
 
 
 
+.imagem_frei{
+    display: flex;
+    justify-self: center;
+    width: 70%;
+    height: 20vh;
+}
 
+
+
+@media screen and (max-width: 768px) {
+    /* HEADER */
+    header {
+        height: auto;
+        padding: 10px 0;
+        display: flex;
+        flex-direction: row;
+
+        .cabecalho {
+            flex-direction: row;
+            gap: 15px;
+
+            .principal {
+                width: 100%;
+                line-height: -10px;
+                height: auto;
+                flex-direction: row;
+                text-align: center;
+
+                .logo{
+                    height: 70px;
+                    margin-right: -10px;
+                }
+
+                h1 {
+                    font-size: 15px;
+                    padding: 10px;
+                    max-width: 100%;
+                    
+                }
+            }
+
+            .inscricao {
+                display: flex;
+                width: 60%;
+                font-size: 11px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    /* CONTAINER IMAGE */
+    .container-image {
+        height: 50vh;
+        flex-direction: row;
+        padding: 20px 0;
+        gap: 20px;
+
+        .Container-informacao {
+            width: 60%;
+            height: auto;
+            display: flex;
+            justify-self: center;
+            align-self: center;
+            
+
+            h1 {
+                display: flex;
+                
+                font-size: 20px;
+                margin-bottom: -20px;
+            }
+
+             hr{
+                width: 90%;
+                display: flex;
+                justify-self: flex-start;
+                margin-right: 25px;
+            }
+
+            h3 {
+                margin-top: -15px;
+                font-size: 10px;
+            }
+
+           
+
+            .inscricao {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                font-size: 16px;
+                display: none;
+            }
+        }
+
+        .imagem2 {
+            width: 30%;
+            height: auto;
+            margin-right: 5px;
+
+            img {
+                height: auto;
+                max-height: 150px;
+            }
+        }
+    }
+
+    .informacao_secao{
+        display: flex;
+        justify-self: center;
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        align-self: center;
+        font-weight: 900;
+    }
+
+    /* CARROSEL */
+    .carrosel {
+        height: auto;
+        padding: 20px 10px;
+
+        .curso-card {
+            width: 45%;
+            margin-bottom: 15px;
+        }
+    }
+
+    /* CAIXA PATIO */
+    .caixa_andar,
+    .caixa_andar123 {
+        height: auto;
+        margin-top: 40px;
+
+        .informacao_andar,
+        .informacao_andar123 {
+            flex-direction: column-reverse;
+            height: auto;
+
+            
+
+            .caixa_texto,
+            .caixa_texto123 {
+                width: 90%;
+                height: auto;
+                padding: 20px;
+                margin: 0 auto;
+
+                ul {
+                    margin-left: 20px;
+                }
+            }
+
+            .atividade_andar,
+            .atividade_andar123 {
+                width: 100%;
+                height: 300px;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    /* CONTATOS */
+    .contatos {
+        height: auto;
+        flex-direction: column;
+        padding: 30px 0;
+        gap: 20px;
+
+        .caixa_instituto,
+        .caixa_loc,
+        .redes_sociais {
+            width: 90%;
+            height: auto;
+            align-items: center;
+            text-align: center;
+            padding-top: 0;
+        }
+
+        .redes_sociais {
+            .link_contatos {
+                align-items: center;
+            }
+        }
+    }
+
+    hr {
+        height: 1px;
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .imagem_frei {
+        height: auto;
+        max-height: 100px;
+    }
+}
+
+/* MEDIA QUERIES PARA TELAS PEQUENAS (ATÉ 480px) */
+@media screen and (max-width: 480px) {
+    /* CARROSEL */
+    .carrosel {
+        .curso-card {
+            width: 90%;
+        }
+    }
+
+    /* TITULOS */
+    h2 {
+        font-size: 28px;
+    }
+
+    /* CONTAINER IMAGE */
+    .container-image {
+        .Container-informacao {
+            h1 {
+                font-size: 24px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+        }
+    }
+}
