@@ -165,7 +165,7 @@ export default function Inicio() {
           
           <div className="informacao_andar123">
           <div className="caixa_texto123">
-            <h1>ATRAÇÕES PRESENTES</h1>
+            <h1>EXPOSIÇÕES</h1>
 
             <h3>1° ANDAR</h3>
           <ul>

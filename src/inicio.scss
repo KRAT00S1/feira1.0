@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: rgb(108, 116, 202);
+    background:#1B263B;
 }
 
 /* HEADER */
@@ -14,6 +14,7 @@ header {
     height: 15vh;
     display: flex;
     flex-direction: row;
+    padding-left: 90px;
 
     .cabecalho {
         display: flex;
@@ -150,6 +151,7 @@ header {
     margin-top: 10px;
     display: flex;
     color: #ffa200;
+    
     font-size: 40px;
     justify-content: center;
     font-family: Arial, Helvetica, sans-serif;
@@ -190,17 +192,18 @@ header {
     width: 100%;
     margin-top: 90px;
     height: 90vh;
-    background:linear-gradient(to top,#C8E0FE,#c8e0fe69) ;
+      background:linear-gradient(to top,#6b7f97fd,#8aaeda69) ; 
     display: flex;
     flex-direction: column;
 
 
     h1 {
-        color: #ffffff;
+        color: #F59E0B;
         justify-content: center;
         width: 100%;
         margin: 5px 0;
         display: flex;
+        font-family: "Archivo Black", sans-serif;
         
     }
 
@@ -230,7 +233,7 @@ header {
                 width: 100%;
                 margin: 20px 0px;
                 justify-content: center;
-                color: #2c2f48;
+                color: #000000;
             }
         }
 
@@ -253,17 +256,19 @@ header {
     width: 100%;
     margin-top: 90px;
     height: 90vh;
-    background:linear-gradient(to bottom,#C8E0FE,#c8e0fe69) ;
+    background:linear-gradient(to bottom,#355883fd,#55719469) ;
     display: flex;
     flex-direction: column;
 
 
     h1 {
-        color: #ffffff;
+        color: #f59f0bd8;
+        
         justify-content: center;
         width: 100%;
         margin: 5px 0;
         display: flex;
+        font-family: "Archivo Black", sans-serif;
         
 
         
@@ -295,7 +300,7 @@ header {
                 width: 100%;
                 margin: 20px 0px;
                 justify-content: center;
-                color: #2c2f48;
+                color: #000000;
             }
         }
 
