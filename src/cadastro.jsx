@@ -39,7 +39,7 @@ export default function Cadastro(){
                 <img src={logo} alt="Logo" height={250}/>
                 </div>
  */}
-            <main>
+            <main  className='fundo_cadastro'>
             
 
                 <div className="cadastro-caixa">
@@ -77,7 +77,7 @@ export default function Cadastro(){
                         <option>Sim</option>
                         <option>Não</option>
                     </select>
-                    <input type="number" placeholder='Telefone'/>
+                    <input type="text" placeholder='Telefone'/>
                     <input type="text" placeholder='CPF*'/>
                     </div>
                 </div>
