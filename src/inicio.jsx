@@ -69,42 +69,36 @@ export default function Inicio() {
           <div className="curso-card">
             <img src={ingles} alt="Curso de Inglês" className="card-image" />
             <h3>INGLÊS</h3>
-            <p>Inglês do básico ao avançado</p>
           </div>
 
           {/* Card 2 - Informática */}
           <div className="curso-card">
             <img src={info} alt="Curso de Informática" className="card-image" />
             <h3>INFORMÁTICA</h3>
-            <p>Manutenção de computadores e gestão de redes e foco em desenvolvimento de sistemas e programas.</p>
           </div>
 
           {/* Card 3 - Elétrica */}
           <div className="curso-card">
             <img src={eletro} alt="Curso de Elétrica" className="card-image" />
             <h3>ELETRICISTA INSTALADOR</h3>
-            <p>Realização de instalações, manutenções e execuções de redes elétricas.</p>
           </div>
 
           {/* Card 4 - Comunicação Visual */}
           <div className="curso-card">
             <img src={olho} alt="Curso de Comunicação Visual" className="card-image" />
             <h3>COMUNICAÇÃO VISUAL</h3>
-            <p>Atuar no desenvolvimento de projetos gráficos, criação de peças publicitárias, marketing digital, fotografia e edição de vídeo.</p>
           </div>
 
           {/* Card 5 - Curso de Eletromecânica de Autos */}
           <div className="curso-card">
             <img src={carro} alt="Curso de Eletromecânica de Autos" className="card-image" />
             <h3>ELETROMECÂNICA DE AUTOS</h3>
-            <p>Manutenções preventivas e corretivas em veículos automotores, elétrica, eletrônica e mecânica automotiva.</p>
           </div>
 
           {/* Card 6 - Administração */}
           <div className="curso-card">
             <img src={anpul} alt="Curso de Administração" className="card-image" />
             <h3>ADMINISTRAÇÃO</h3>
-            <p>Apoio administrativo em diversas áreas, como controle de estoques, gestão de recursos humanos, logística, marketing e operações contábeis.</p>
           </div>
         </div>
       </section>
