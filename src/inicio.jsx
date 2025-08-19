@@ -158,7 +158,7 @@ export default function Inicio() {
       </section>
 
 
-          <section className="caixa_andar123">
+    <section className="caixa_andar123">
           
           <div className="informacao_andar123">
           <div className="caixa_texto123">
@@ -190,7 +190,7 @@ export default function Inicio() {
 
           <img src={catalogo} alt="" className="atividade_andar123" />
           </div>
-</section>
+    </section>
 
 
 <footer className="contatos">
@@ -199,6 +199,8 @@ export default function Inicio() {
 <h2>Instito Nossa Senhora <br/> de Fatima</h2>
 
 </div>
+
+
 <hr/>
 <div className="caixa_loc">
 
@@ -213,6 +215,8 @@ Veleiros - São Paulo - SP 04773-000</p>
 </div>
 <hr/>
 <div className="redes_sociais">
+<h4>CONTATOS</h4>
+  
 
   <p>(11) 3798-5037 - secretaria<br/>
 (11) 96398-6252 - secretaria - whatsapp</p>

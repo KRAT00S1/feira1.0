@@ -1,51 +1,77 @@
 .fundo_cadastro {
-    background-color: wheat;
     width: 100%;
     height: 50pc;
     display: flex;
     justify-content: center;
     gap: 10cm;
-    background-image: url(./assets/images/imagem_central.png);
-    background-size: 120pc;
-    background-position-x: center;
-    background-position-y: center ;
-    background-repeat: no-repeat;
-    align-items: center;
 
+  
     
 
 
-
-
-.cadastro-caixa{
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:  #03213fab;;
-    border-radius: 0px 55px;
+.caixa-principal{   
+    background-color: #ffffff;
     display: flex;
-    width: 500px;
-    height: 40pc;
-    gap: 20px;
-    flex-direction: column;
-    align-items: center;
+    height: auto;
     padding: 20px;
+    position: relative;
+    padding-left: 86px;
+    margin-bottom: -10px;
+    border-radius: 10px;
+
+
+    .central{
+        background-color: rgb(255, 255, 255);
+        height: auto;
+        width: 50%;
+        object-fit: cover;
+        display: block;
+        border-radius: 70px 0 0 70px;
+        
+    }
+
+    .logo-feira{
+        position: absolute;
+        display: flex;
+        transform: translate(190px, 120px);
+        width: 25%;
+        height: auto;
+
+    }
+
+    .cadastro-caixa{
+        position: relative;
+        color: #ffffff;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: rgba(27, 38, 59, 1);
+        border-radius: 0 80px;
+        display: flex;
+        width: 50%;
+        height: auto;
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        left: -77px;
+
+        h2{
+            font-size: 40px;
+            margin: 10px;
+        }
+
+        
     
-
-
-
-
-
 
 
     input{
         color:rgb(0, 0, 0);
         height: inherit;
-        width: 100%;
+        width: 25pc;
         font-size: 0.5cm;
         padding: 6px;
         border: 1px solid gray;
         border-radius: 5px;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         flex-direction: column;
         display: flex;
     }
@@ -59,22 +85,103 @@
         border-radius: 5px;
         flex-direction: column;
         display: flex;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
         font-family: Arial, Helvetica, sans-serif;
+        cursor:pointer;
+        
+
+        option{
+            cursor:pointer;
+            color: gray;
+        }
     }
+
+
     
+
+    .cadastrar{
+        background-color: orangered;
+        width: 20pc;
+        height: auto;
+        padding: 15px;
+        border-radius: 20px;
+        border: 1px solid orangered;
+        font-size: 20px;
+        font-weight: 600;
+        color: white;
+        }
+        .cadastrar:hover{
+            background-color: rgb(236, 69, 8);
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            transform: scale(1.05);
+
+
+
+        
+    }
+
+
+
+        }
+
+    }
+
+
+
+
 }
 
+/*.rodape{
+    
+        display: flex;
+        height: auto;
+        padding: 30px 0;
+        gap: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .caixa_instituto,
+        .caixa_loc,
+        .contatos-tel{
+            width: 50%;
+            height: auto;
+            margin: auto;
+            align-items: center;
+            text-align: center;
+            padding-top: 0;
+        }
+
+        con
+        
+        
+    
+   
+ 
+    hr {
+        height: 1px;
+        width: 20%;
+        margin: 20px auto;
+
+    }
+
+    .imagem_frei {
+        height: auto;
+        max-height: 100px;
+    }
+}*/
 
 
 
 
 
-}
-
-
-
-
+/*background-image: url(./assets/images/imagem_central.png);
+    background-size: 120pc;
+    background-position-x: center;
+    background-position-y: center ;
+    background-repeat: no-repeat;
+    align-items: center;*/
 
 
 

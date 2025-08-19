@@ -16,6 +16,7 @@ import anpul from './assets/images/ampulheta.png';
 import predio from './assets/images/predio.png';
 import catalogo from './assets/images/andar123.png';
 import frei from './assets/images/vemprofrei.png'
+import centro from './assets/images/imagem_central.png'
 
 
 
@@ -39,8 +40,12 @@ export default function Cadastro(){
                 <img src={logo} alt="Logo" height={250}/>
                 </div>
  */}
-            <main  className='fundo_cadastro'>
+            <main className='fundo_cadastro'>
             
+            <div className="caixa-principal">
+
+                <img src={centro} className='central' height={600}/>
+                <img src={cursos} className='logo-feira'/>
 
                 <div className="cadastro-caixa">
                     <h2>Cadastro</h2>
@@ -80,10 +85,16 @@ export default function Cadastro(){
                     <input type="text" placeholder='Telefone'/>
                     <input type="text" placeholder='CPF*'/>
                     </div>
+
+                    <button className='cadastrar'>Cadastrar-se</button>
                 </div>
-            </main>
+                
+            </div>
+        </main>
 
 
+
+{/*
 
 <footer className="contatos">
 <div className="caixa_instituto">
@@ -116,13 +127,13 @@ Veleiros - São Paulo - SP 04773-000</p>
 </div>
 
 
-</footer>
+</footer> 
+
+*/}
+
 
 </div>
 
-
-
-            
 
     )
 }
