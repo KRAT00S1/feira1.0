@@ -28,7 +28,7 @@ export default function Cadastro(){
                    <div className="cabecalho">
                         <div className="principal">
                         <Link to={'/'}><img src={logo} className='logo' /></Link>
-                        <h1>Instituto Nóssa Senhora de Fátima</h1>      
+                        <h1>Instituto Nossa Senhora de Fátima</h1>      
                         </div>
                     </div>  
             </header>
@@ -56,12 +56,12 @@ export default function Cadastro(){
                     </select> 
                     <select>
                         <option value="" selected disabled>Interesse em algum curso</option>
-                        <option>Informatica</option>
+                        <option>Informática</option>
                         <option>Administração</option>
                         <option>Comunicação Visual</option>
                         <option>Inglês</option>
-                        <option>Eletrica</option>
-                        <option>Eletronica de Carros</option>
+                        <option>Eletricista Instalador</option>
+                        <option>Eletromecânica de Autos</option>
                     </select> 
                     <input type="datetime" placeholder='Previsão de chegada' />
                     <input type="email"placeholder='Email' />
