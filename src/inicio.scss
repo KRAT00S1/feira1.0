@@ -5,17 +5,18 @@
 }
 
 body {
-    background:#1B263B;
+    background:#ffffff;
 }
 
 /* HEADER */
 header {
     width: 100%;
-    height: 12vh;
+    height: 15vh;
     display: flex;
     padding-left: 90px;
     flex-direction: row;
     background:linear-gradient(to right,#1B263B,#698fbd49) ;
+    position: relative;
     
 
     .cabecalho {
@@ -101,6 +102,7 @@ header {
     height: 90vh;
     display: flex;
     align-items: center;
+    position: relative;
     justify-content: center;
     gap: 70px;
     background-size: 1500px;
@@ -181,7 +183,7 @@ header {
 .informacao_secao {
     margin-top: 10px;
     display: flex;
-    color: #ffa200;
+    color: #1B263B;
     
     font-size: 40px;
     justify-content: center;
@@ -193,94 +195,137 @@ header {
 .carrosel {
     display: flex;
     width: 100%;
+    height: 90vh;
+    margin-top: 20px;
+    background-image: url(./assets/images/wave.svg);    
+    gap: 10px;
     justify-content: center;
     align-items: center;
-    height: auto;
-    background-color: #EAF3FE;
-    margin-top: 10px;
-    gap: 10px;
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     flex-wrap: wrap;
     padding:50px ;
+    background-size: cover;    
+    background-position: center;  
+    background-repeat: no-repeat;
+
+    .localcard{
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
 
     .curso-card {
         padding: 10px;
-        width: 20%;
-        background: #e6f2ff96;
+        width: 300px;
+        background: transparent;
         text-align: center;
-        border: 1px solid #0057b3a1;
+        flex-direction: column;
         border-radius: 10px;
         overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         transition: transform 0.3s ease;
         font-family: Arial, Helvetica, sans-serif;
         color: #003366;
+    }
     }
 }
 
 /* CAIXA PATIO */
 .caixa_andar {
     width: 100%;
-    margin-top: 90px;
+    margin-top: 190px;
     height: 90vh;
-    background:linear-gradient(to top,#6b7f97fd,#8aaeda69) ; 
+    background: #1B263B;
     display: flex;
     flex-direction: column;
+   
 
 
-    h1 {
-        color: #F59E0B;
-        justify-content: center;
-        width: 100%;
-        margin: 5px 0;
-        display: flex;
-        font-family: "Archivo Black", sans-serif;
-        
-    }
 
     .informacao_andar {
+        
         width: 100%;
         display: flex;
         flex-direction: row;
         height: 90vh;
     
-
+        
         .caixa_texto {
             display: flex;
-            width: 60%;
+            width: 50%;
             height: 90vh;
-
+            padding-right: 100px;
             flex-direction: column;
+            justify-content: start;
+            align-items: center;
             font-family: Arial, Helvetica, sans-serif;
+            .Borda-texto{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                max-width: 600px;
+                padding: 20px;
+                max-height: 500px;
+                justify-content: flex-start;
+                border-radius: 50px;
+                align-items: flex-start;
+                border: 1px solid rgb(255, 255, 255);
+                .convidados{
+                    font-weight: 800;
+                    color: #EAF3FE;
+                    width: 60%;
+                    margin-bottom: 10px;
+                }
+
+                    h1 {
+                    color: #F59E0B;
+                    justify-content: flex-start;
+                    padding-left: 5px;
+                    width: 100%;
+
+                    display: flex;
+                    font-family: "Archivo Black", sans-serif;
+   
+        
+    }
 
             ul {
-                margin-left: 70px;
-                color: #ffffff;
+                margin-left: 20px;
+                line-height: 15px;
+                font-size: 14PX;
+                color: #FFC078;
             }
 
             h3 {
                 font-family: Arial, Helvetica, sans-serif;
                 display: flex;
                 width: 100%;
-                margin: 20px 0px;
-                justify-content: center;
-                color: #000000;
-            }
+                font-size: 18px;
+                margin: 10px 0;
+                justify-content: flex-start;
+                color: rgb(245, 135, 48);
+            }}
         }
 
         .atividade_andar {
-            width: 49%;
+            width: 60%;
             height: 90vh;
             display: flex;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            box-shadow: 0 1px black;
-            border-radius: 5px 0 0 5px;
+
+            img{
+                width: 100%;
+                height: auto;
+                clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+            }
+
         }
     }
 }
+
 
 
 /* CAIXA ANDARES */
@@ -288,25 +333,11 @@ header {
     width: 100%;
     margin-top: 90px;
     height: 90vh;
-    background:linear-gradient(to bottom,#355883fd,#55719469) ;
+    background: #1B263B;
     display: flex;
     flex-direction: column;
-    border-radius: 0px 20px 20px 0px;
-    
-    
 
 
-    h1 {
-        color: #f59f0bd8;
-        justify-content: center;
-        width: 100%;
-        margin: 5px 0;
-        display: flex;
-        font-family: "Archivo Black", sans-serif;
-        
-
-        
-    }
 
     .informacao_andar123 {
         width: 100%;
@@ -314,41 +345,72 @@ header {
         flex-direction: row-reverse;
         height: 90vh;
     
-
+        
         .caixa_texto123 {
             display: flex;
-            width: 60%;
+            width: 50%;
             height: 90vh;
-
+            padding-right: 70px;
             flex-direction: column;
+            justify-content: start;
+            align-items: flex-end;
+
             font-family: Arial, Helvetica, sans-serif;
+            .Borda-texto123{
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                max-width: 450px;
+                padding: 20px;
+                min-height: 400px;
+                justify-content: flex-start;
+                border-radius: 50px;
+                align-items: flex-start;
+                border: 1px solid rgb(255, 255, 255);
+
+                    h1 {
+                    color: #F59E0B;
+                    justify-content: flex-start;
+                    padding-left: 5px;
+                    width: 100%;
+
+                    display: flex;
+                    font-family: "Archivo Black", sans-serif;
+   
+        
+    }
 
             ul {
-                margin-left: 70px;
-                color: #fffefe;
+                margin-left: 20px;
+                line-height: 15px;
+                font-size: 14PX;
+                color: #FFC078;
             }
 
             h3 {
                 font-family: Arial, Helvetica, sans-serif;
                 display: flex;
                 width: 100%;
-                margin: 20px 0px;
-                justify-content: center;
-                color: #000000;
-            }
+                font-size: 18px;
+                margin: 10px 0;
+                justify-content: flex-start;
+                color: rgb(255, 255, 255);
+            }}
         }
 
         .atividade_andar123 {
-            width: 40%;
+            width: 60%;
             height: 90vh;
             display: flex;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            box-shadow: 0 1px black;
-            border-radius: 0 5px 5px 0;
 
-            
+            img{
+           clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+           width: 100%;
+            }
+
         }
     }
 }
@@ -383,6 +445,7 @@ hr{
         height: 40vh;
         flex-direction: column;
         text-align: center;
+        align-self: center;
         justify-content: center;
         align-items: center;
         
@@ -420,7 +483,6 @@ hr{
         height: 30vh;
         display: flex;
         flex-direction: column;
-        padding-top: 50px;
         justify-content: flex-start;
         align-items: flex-start;
         
@@ -452,93 +514,70 @@ hr{
 }
 
 
+/* ... (mantenha todo o código SCSS anterior) ... */
 
+/* MEDIA QUERIES PARA DISPOSITIVOS MÓVEIS */
 @media screen and (max-width: 768px) {
     /* HEADER */
     header {
         height: auto;
         padding: 10px 0;
-        display: flex;
         flex-direction: row;
+        height: 15vh;
 
         .cabecalho {
             flex-direction: row;
             gap: 15px;
 
             .principal {
-                width: 60%;
-                line-height: -10px;
+                width: 100%;
                 height: auto;
                 flex-direction: row;
+                justify-content: flex-start;
                 
-
-                .logo{
-                    height: 70px;
-                    margin-right: -10px;
-                }
 
                 h1 {
                     font-size: 15px;
                     padding: 10px;
-                    max-width: 100%;
-                    
+                    min-width: 150px;
                 }
             }
-            .arealink{ 
-                max-width: 70%;
+            .arealink{
+                display: flex;
+                width: 80%;
+                .login{display: none;}
 
-
-            .login{
-                display: none;
-            }
+            
 
             .inscricao {
-                display: flex;
-                width: 90%;
-                font-size: 11px;
+                width: 100%;
+                font-size: 12px;
                 margin-bottom: 10px;
-                background-color: rgba(255, 72, 0, 0.699);
             }
-        }
+            }
         }
     }
 
     /* CONTAINER IMAGE */
     .container-image {
-        height: 40pc;
-        flex-direction: row;
+        height: auto;
+        flex-direction: column;
         padding: 20px 0;
         gap: 20px;
-        
 
         .Container-informacao {
-            width: 60%;
+            width: 90%;
             height: auto;
-            display: flex;
-            justify-self: center;
-            align-self: center;
-            
+            text-align: center;
 
             h1 {
-                display: flex;
-                
-                font-size: 20px;
-                margin-bottom: -20px;
-            }
-
-             hr{
-                width: 90%;
-                display: flex;
-                justify-self: flex-start;
-                margin-right: 25px;
+                font-size: 30px;
+                margin-top: 0;
             }
 
             h3 {
-                margin-top: -15px;
-                font-size: 10px;
+                font-size: 20px;
             }
-
-           
 
             .inscricao {
                 width: 80%;
@@ -550,61 +589,79 @@ hr{
         }
 
         .imagem2 {
-            width: 30%;
+            width: 90%;
             height: auto;
-            margin-right: 5px;
 
             img {
                 height: auto;
-                max-height: 150px;
+                max-height: 300px;
             }
         }
     }
 
-    .informacao_secao{
-        display: flex;
-        justify-self: center;
-        width: 100%;
-        text-align: center;
-        font-size: 30px;
-        align-self: center;
-        font-weight: 900;
-    }
-
     /* CARROSEL */
     .carrosel {
+        
         height: auto;
         padding: 20px 10px;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-self: center ;
+        .informacao_secao{
+            min-width: 500px;
+            font-size: 35px;
+            align-items: center;
+            display: flex;
+            justify-self: center;
+    
+        }
 
         .curso-card {
             width: 45%;
             margin-bottom: 15px;
+            border: 1px solid ;
         }
     }
 
     /* CAIXA PATIO */
     .caixa_andar,
     .caixa_andar123 {
-        height: auto;
-        margin-top: 40px;
+        height: 130vh;
+        margin-top: 50px;
+        flex-direction: column;
+
 
         .informacao_andar,
         .informacao_andar123 {
             flex-direction: column-reverse;
             height: auto;
-
             
 
             .caixa_texto,
             .caixa_texto123 {
+
+
                 width: 90%;
                 height: auto;
                 padding: 20px;
                 margin: 0 auto;
 
+
+                .Borda-texto,
+                .Borda-texto123{
+                    border: none;
+
+                h3{
+                    font-size: 15px;
+                    width: 300px;
+                }
+
                 ul {
                     margin-left: 20px;
-                }
+                    font-size: 13px;
+                    line-height: 15px;
+                }}
             }
 
             .atividade_andar,
@@ -612,6 +669,8 @@ hr{
                 width: 100%;
                 height: 300px;
                 margin-top: 20px;
+                
+                img{clip-path: none;}
             }
         }
     }
@@ -623,11 +682,10 @@ hr{
         padding: 30px 0;
         gap: 20px;
 
-
         .caixa_instituto,
         .caixa_loc,
         .redes_sociais {
-            width: 50%;
+            width: 90%;
             height: auto;
             align-items: center;
             text-align: center;
@@ -680,5 +738,3 @@ hr{
         }
     }
 }
-
-

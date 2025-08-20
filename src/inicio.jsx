@@ -10,7 +10,7 @@ import olho from './assets/images/icon_olho.png';
 import carro from './assets/images/carro.png';
 import anpul from './assets/images/ampulheta.png';
 import predio from './assets/images/predio.png';
-import catalogo from './assets/images/andar123.png';
+import computador from './assets/images/LL.jpeg';
 import frei from './assets/images/vemprofrei.png'
 
 export default function Inicio() {
@@ -63,8 +63,10 @@ export default function Inicio() {
 
       {/* CURSOS */}
       <section>
-        <h2 className='informacao_secao' >Cursos Participantes</h2>
+        
         <div className="carrosel">
+          <h2 className='informacao_secao' >Cursos Participantes</h2>
+          <div className="localcard">
           {/* Card 1 - Inglês */}
           <div className="curso-card">
             <img src={ingles} alt="Curso de Inglês" className="card-image" />
@@ -100,19 +102,22 @@ export default function Inicio() {
             <img src={anpul} alt="Curso de Administração" className="card-image" />
             <h3>ADMINISTRAÇÃO</h3>
           </div>
+          </div>
+          
         </div>
       </section>
 
 
-      <h2 className='informacao_secao'>PROGRAMAÇÃO DA 5ª FEIRA DE PROFISSÕES</h2>
       
       <section className="caixa_andar">
         
         <div className="informacao_andar">
+          
           <div className="caixa_texto">
-            <h1>PÁTIO</h1>
-            <h3>
-              <strong>Estandes de empresas convidadas</strong>
+            <div className="Borda-texto">
+            <h1 >PÁTIO</h1>
+            <h3 className='convidados'>
+              Estandes de empresas convidadas
             </h3>
             <ul>
               <li>Casa da Mulher Paulistana</li>
@@ -151,9 +156,12 @@ export default function Inicio() {
                 <strong>SALA 6:</strong> Inglês
               </li>
             </ul>
+            </div>
           </div>
 
-          <img src={predio} alt="" className="atividade_andar" />
+          <div className="atividade_andar">
+          <img src={predio} alt=""  />
+          </div>
         </div>
       </section>
 
@@ -162,6 +170,7 @@ export default function Inicio() {
           
           <div className="informacao_andar123">
           <div className="caixa_texto123">
+            <div className="Borda-texto123">
             <h1>EXPOSIÇÕES</h1>
 
             <h3>1° ANDAR</h3>
@@ -185,10 +194,13 @@ export default function Inicio() {
             <li>Simulação de entrevista de emprego</li>
             <li>Oficina de Linkedin</li>
           </ul>
+          </div>
 
           </div>
 
-          <img src={catalogo} alt="" className="atividade_andar123" />
+          <div className="atividade_andar123" >
+          <img src={computador} alt="" />
+          </div>
           </div>
     </section>
 
