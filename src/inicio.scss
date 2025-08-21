@@ -15,7 +15,7 @@ header {
     display: flex;
     padding-left: 90px;
     flex-direction: row;
-    background:linear-gradient(to right,#1B263B,#698fbd49) ;
+    background:linear-gradient(to left,#1a2977c2,#475fd89a) ;
     position: relative;
     
 
@@ -58,7 +58,7 @@ header {
 
         .login{
             text-decoration: none;
-            width: 25%;
+            width: 35%;
             padding: 10px;
             display: flex;
             font-size: 18px;
@@ -79,7 +79,7 @@ header {
             text-decoration: none;
             width: 40%;
             padding: 10px;
-            display: flex;
+            display: none;
             font-size: 18px;
             align-items: center;
             justify-content: center;
@@ -106,8 +106,8 @@ header {
     justify-content: center;
     gap: 70px;
     background-size: 1500px;
-    background-position-x: center;
-    background-position-y: center ;
+    background-size: cover;   
+    background-position: center;  
     background-repeat: no-repeat;
 
     .Container-informacao {
@@ -218,16 +218,29 @@ header {
 
     .curso-card {
         padding: 10px;
-        width: 300px;
+        width: 250px;
+        height: auto;
         background: transparent;
         text-align: center;
         flex-direction: column;
         border-radius: 10px;
-        overflow: hidden;
-        transition: transform 0.3s ease;
         font-family: Arial, Helvetica, sans-serif;
         color: #003366;
+        transition: all 1.0s;
+
+       
+
+        img{
+            border-radius: 150%;
+            border: 15px solid #28adff83 ;
+            
+        }
     }
+    .curso-card:hover{
+        transform: scale(1.1);
+        
+    }
+    
     }
 }
 
@@ -255,18 +268,17 @@ header {
             display: flex;
             width: 50%;
             height: 90vh;
-            padding-right: 100px;
             flex-direction: column;
-            justify-content: start;
+            justify-content: center;
             align-items: center;
             font-family: Arial, Helvetica, sans-serif;
             .Borda-texto{
                 margin-top: 10px;
                 display: flex;
                 flex-direction: column;
-                max-width: 600px;
-                padding: 20px;
-                max-height: 500px;
+                min-width: 500px;
+                padding: 30px;
+                min-height: 600px;
                 justify-content: flex-start;
                 border-radius: 50px;
                 align-items: flex-start;
@@ -275,6 +287,7 @@ header {
                     font-weight: 800;
                     color: #EAF3FE;
                     width: 60%;
+                    margin-top: 20px;
                     margin-bottom: 10px;
                 }
 
@@ -282,6 +295,7 @@ header {
                     color: #F59E0B;
                     justify-content: flex-start;
                     padding-left: 5px;
+                    
                     width: 100%;
 
                     display: flex;
@@ -292,7 +306,7 @@ header {
 
             ul {
                 margin-left: 20px;
-                line-height: 15px;
+                line-height: 20px;
                 font-size: 14PX;
                 color: #FFC078;
             }
@@ -302,9 +316,9 @@ header {
                 display: flex;
                 width: 100%;
                 font-size: 18px;
-                margin: 10px 0;
+                margin-top: 20px;
                 justify-content: flex-start;
-                color: rgb(245, 135, 48);
+                color: rgb(255, 255, 255);
             }}
         }
 
@@ -352,8 +366,8 @@ header {
             height: 90vh;
             padding-right: 70px;
             flex-direction: column;
-            justify-content: start;
-            align-items: flex-end;
+            justify-content: center;
+            align-items: center;
 
             font-family: Arial, Helvetica, sans-serif;
             .Borda-texto123{
@@ -362,7 +376,7 @@ header {
                 flex-direction: column;
                 max-width: 450px;
                 padding: 20px;
-                min-height: 400px;
+                min-height:500px;
                 justify-content: flex-start;
                 border-radius: 50px;
                 align-items: flex-start;
@@ -382,7 +396,7 @@ header {
 
             ul {
                 margin-left: 20px;
-                line-height: 15px;
+                line-height: 20px;
                 font-size: 14PX;
                 color: #FFC078;
             }
@@ -392,7 +406,7 @@ header {
                 display: flex;
                 width: 100%;
                 font-size: 18px;
-                margin: 10px 0;
+                margin-top: 20px;
                 justify-content: flex-start;
                 color: rgb(255, 255, 255);
             }}
@@ -403,11 +417,12 @@ header {
             height: 90vh;
             display: flex;
             background-size: cover;
+            object-fit: cover;
             background-position: center;
             background-repeat: no-repeat;
 
             img{
-           clip-path: polygon(0 0, 60% 0, 100% 100%, 0% 100%);
+           clip-path: polygon(0 0, 80% 0, 100% 100%, 0% 100%);
            width: 100%;
             }
 
@@ -426,29 +441,43 @@ hr{
 
 }
 .contatos{
-    margin-top: 100px;
+    
     width: 100%;
     height: 40vh;
-    background: linear-gradient(to left, #f5c33b, #f9d976);
+    background: linear-gradient(to bottom, #ffffff, rgb(153, 210, 243));
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    gap: 40px;
+    justify-content: center;
+    gap: 10px;
     font-family: Arial, Helvetica, sans-serif;
     color: #2c2f48;
 
 
+
+    .caixa_loc{
+        width: 30%;
+        height: 30vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        h4{
+            font-weight: 800;
+        }
+
+
+    }
     .caixa_instituto{
         width: 30%;
         display: flex;
         height: 40vh;
         flex-direction: column;
         text-align: center;
-        align-self: center;
         justify-content: center;
         align-items: center;
-        
+        color: #ffffff;    
         
         img{
             width: 100px;
@@ -463,28 +492,13 @@ hr{
 
     }
 
-    .caixa_loc{
-        width: 20%;
-        height: 30vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 30px;
-
-        h4{
-            font-weight: 800;
-        }
-
-
-    }
-
     .redes_sociais{
         width: 30%;
         height: 30vh;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+        justify-content: center;
+        align-items: center;
         
         
         gap: 30px;
@@ -494,7 +508,7 @@ hr{
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             a{
                 text-decoration: none;
                 color: #2c2f48;
@@ -506,12 +520,6 @@ hr{
 
 
 
-.imagem_frei{
-    display: flex;
-    justify-self: center;
-    width: 70%;
-    height: 20vh;
-}
 
 
 /* ... (mantenha todo o código SCSS anterior) ... */
@@ -553,6 +561,7 @@ hr{
                 width: 100%;
                 font-size: 12px;
                 margin-bottom: 10px;
+                display: flex;
             }
             }
         }
@@ -560,10 +569,11 @@ hr{
 
     /* CONTAINER IMAGE */
     .container-image {
-        height: auto;
+        height: 90vh;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 90px 0;
         gap: 20px;
+
 
         .Container-informacao {
             width: 90%;
@@ -577,7 +587,11 @@ hr{
 
             h3 {
                 font-size: 20px;
+            
             }
+
+
+    
 
             .inscricao {
                 width: 80%;
@@ -614,20 +628,37 @@ hr{
             align-items: center;
             display: flex;
             justify-self: center;
+            
     
         }
+        .localcard{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          
+            gap: 20px;
+            min-width: 500px;
 
         .curso-card {
-            width: 45%;
+            display: flex;
+            gap: 10px;
+            width: 55%;
             margin-bottom: 15px;
-            border: 1px solid ;
+            align-items: center;
+            justify-content: center;
+            transition: none !important;
+            transform: none !important;
+
         }
+
+    }
     }
 
     /* CAIXA PATIO */
     .caixa_andar,
     .caixa_andar123 {
-        height: 130vh;
+        height: auto;
         margin-top: 50px;
         flex-direction: column;
 
@@ -636,31 +667,43 @@ hr{
         .informacao_andar123 {
             flex-direction: column-reverse;
             height: auto;
+        
+        
             
 
             .caixa_texto,
             .caixa_texto123 {
 
-
+                
                 width: 90%;
                 height: auto;
                 padding: 20px;
                 margin: 0 auto;
+                border-radius: 12px;
 
 
                 .Borda-texto,
                 .Borda-texto123{
                     border: none;
+                    min-width: 400PX;
+
+
+                h1{
+                   display: flex;
+                   justify-content: center;
+                   margin: 10px 0;
+                }
 
                 h3{
                     font-size: 15px;
                     width: 300px;
+                    margin-bottom: 10px;
                 }
 
                 ul {
                     margin-left: 20px;
                     font-size: 13px;
-                    line-height: 15px;
+                    line-height: 20px;
                 }}
             }
 
@@ -668,9 +711,14 @@ hr{
             .atividade_andar123 {
                 width: 100%;
                 height: 300px;
-                margin-top: 20px;
+            
+            
                 
-                img{clip-path: none;}
+                img{
+                    clip-path: none;
+                    border-radius: 5px;
+                }
+
             }
         }
     }

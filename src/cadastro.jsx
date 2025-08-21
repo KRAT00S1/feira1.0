@@ -7,15 +7,6 @@ import { Link } from 'react-router'
 
 import logo from './assets/images/logo.png'
 import cursos from './assets/images/cursos.png'
-import ingles from './assets/images/bandeira.png';
-import info from './assets/images/info.png';
-import eletro from './assets/images/eletro.png';
-import olho from './assets/images/icon_olho.png';
-import carro from './assets/images/carro.png';
-import anpul from './assets/images/ampulheta.png';
-import predio from './assets/images/predio.png';
-import catalogo from './assets/images/andar123.png';
-import frei from './assets/images/vemprofrei.png'
 import centro from './assets/images/imagem_central.png'
 
 

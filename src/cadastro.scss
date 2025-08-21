@@ -109,8 +109,10 @@
         font-size: 20px;
         font-weight: 600;
         color: white;
+        transition: all 1.3s ;
         }
         .cadastrar:hover{
+            
             background-color: rgb(236, 69, 8);
             cursor: pointer;
             box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -181,14 +183,14 @@
     justify-content: center;
 
     .central {
-      display: none !important; // Esconde a imagem no mobile
+      display: none !important; 
     }
 
     .caixa-principal {
       text-align: center;
       height: auto;
       flex-direction: column;
-      justify-self: center;
+      justify-content: center;
       align-items: center;
       width: 100%;
       background-color: transparent;
@@ -197,7 +199,7 @@
         position: relative;
         transform: none;
 
-        display: none;
+        display: flex;
         background-color: transparent;
         margin-right: 70px;
         justify-content: center;
@@ -205,9 +207,7 @@
         justify-self: center;
         align-self: center;
         min-height: 200px;
-        min-width: 200px;
-        
-        
+        min-width: 200px; 
       }
 
       .cadastro-caixa {
@@ -215,14 +215,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center; // Centraliza no mobile
-        width: 90%; // Para caber na tela
-        min-width: 380px; // Impede de ficar gigante
+        width: 100%; // Para caber na tela
+        min-width: 430px; // Impede de ficar gigante
         margin: 20px auto 0 auto; // Centraliza sem "empurrar"
         padding: 30px;
 
         input {
           width: 100%;
-          max-width: 360px;
+          min-width: 360px;
         }
 
         select {

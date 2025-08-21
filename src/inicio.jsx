@@ -26,7 +26,7 @@ export default function Inicio() {
 
           <div className="arealink">
           <Link to={'/login'} className='login'>
-            LOGIN
+            AREA ADMIN
             
             </Link>
           <Link to={'/cadastro'} className="inscricao">
@@ -206,14 +206,9 @@ export default function Inicio() {
 
 
 <footer className="contatos">
-<div className="caixa_instituto">
-<img src={logo} alt="" />
-<h2>Instito Nossa Senhora <br/> de Fatima</h2>
-
-</div>
 
 
-<hr/>
+
 <div className="caixa_loc">
 
   <h4>LOCALIZAÇÃO</h4>
@@ -226,6 +221,13 @@ Veleiros - São Paulo - SP 04773-000</p>
 
 </div>
 <hr/>
+<div className="caixa_instituto">
+<img src={logo} alt="" />
+<h2>Instito Nossa Senhora <br/> de Fatima</h2>
+
+</div>
+<hr/>
+
 <div className="redes_sociais">
 <h4>CONTATOS</h4>
   
@@ -246,11 +248,6 @@ Veleiros - São Paulo - SP 04773-000</p>
 
 
 </footer>
-
-<footer>
-<img src={frei} alt="" className='imagem_frei'/>
-</footer>
-
 
 
       
