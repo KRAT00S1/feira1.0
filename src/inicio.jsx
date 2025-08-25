@@ -24,15 +24,7 @@ export default function Inicio() {
             <h1>Instituto Nossa Senhora de Fátima</h1>
           </div>
 
-          <div className="arealink">
-          <Link to={'/login'} className='login'>
-            AREA ADMIN
-            
-            </Link>
-          <Link to={'/cadastro'} className="inscricao">
-            INSCREVA-SE
-          </Link>
-          </div>
+          
         </div>
       </header>
 
@@ -223,7 +215,7 @@ Veleiros - São Paulo - SP 04773-000</p>
 <hr/>
 <div className="caixa_instituto">
 <img src={logo} alt="" />
-<h2>Instito Nossa Senhora <br/> de Fatima</h2>
+<h2>Instituto Nossa Senhora <br/> de Fatima</h2>
 
 </div>
 <hr/>
