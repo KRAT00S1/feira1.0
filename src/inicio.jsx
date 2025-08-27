@@ -23,6 +23,16 @@ export default function Inicio() {
             <img src={logo} className="logo" alt="Logo Instituto" />
             <h1>Instituto Nossa Senhora de Fátima</h1>
           </div>
+          
+          <div className="arealink">
+          <Link to={'/login'} className='login'>
+            AREA ADMIN
+            
+            </Link>
+          <Link to={'/cadastro'} className="inscricao">
+            INSCREVA-SE
+          </Link>
+          </div>
 
           
         </div>
