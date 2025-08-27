@@ -4,6 +4,7 @@ import './index.scss'
 import './login.scss'
 import { Link } from 'react-router';
 import logo from './assets/images/logo.png';
+import curso from './assets/images/cursos.png'
 
 
 export default function Login(){
@@ -29,14 +30,58 @@ export default function Login(){
                     <h1>LOGIN</h1>
                         <input className='nome' type="text" placeholder='Usuario:' />
                         <input className='senha' type="password" placeholder='Senha:' id="" />
+                        <button type="submit" className='cadastrar'>Entrar</button>
                     </div>
                 </div>
                 <div className="container-imagem">
-                    
+                   <img className='container-curso' src={curso} alt="" /> 
                 </div>
                 </div>
             </div>
 
+            <footer className="contatos">
+
+
+
+<div className="caixa_loc">
+
+  <h4>LOCALIZAÇÃO</h4>
+
+  <p>Instituto Social Nossa Senhora de Fátima
+Av. Cel. Octaviano de Freitas Costa, 463 
+Veleiros - São Paulo - SP 04773-000</p>
+
+
+
+</div>
+<hr/>
+<div className="caixa_instituto">
+<img src={logo} alt="" />
+<h2>Instituto Nossa Senhora <br/> de Fatima</h2>
+
+</div>
+<hr/>
+
+<div className="redes_sociais">
+<h4>CONTATOS</h4>
+  
+
+  <p>(11) 3798-5037 - secretaria<br/>
+(11) 96398-6252 - secretaria - whatsapp</p>
+
+<div className="link_contatos">
+<a href="">adm@acaonsfatima.org.br</a>
+<a href="">secretaria@acaonsfatima.org.br</a>
+</div>
+
+
+
+
+</div>
+
+
+
+</footer>
 
             </main>
 
