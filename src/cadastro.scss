@@ -12,47 +12,61 @@
 .caixa-principal{   
     background-color: #ffffff;
     display: flex;
-    height: auto;
-    padding: 20px;
+    width: 90%;
+    height: 105vh;
+    margin: 10px;
+    padding: 10px;
     position: relative;
     padding-left: 86px;
     margin-bottom: -10px;
     border-radius: 10px;
+    flex-direction: row-reverse;
 
 
     .central{
         background-color: rgb(255, 255, 255);
-        height: auto;
-        width: 50%;
-        object-fit: cover;
-        display: block;
-        border-radius: 70px 0 0 70px;
-        
-    }
-
-    .logo-feira{
-        position: absolute;
+        height: 105vh;
+        width: 60%;
         display: flex;
-        transform: translate(170px, 150px);
-        width: 25%;
-        height: auto;
+        border-radius: 70px 0 0 70px;
+        background-image: url(/src/assets/images/imagem_central.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 10px;
+        justify-content: flex-start;
+        padding-left: 50px;
+        align-items: center;
+        
+
+
+        .logo-feira{
+         display: flex;
+         width: 450px;
+         height: auto;
+         opacity: 70%;
+        }
+
 
     }
+
+
 
     .cadastro-caixa{
-        position: relative;
         color: #ffffff;
         font-family: Arial, Helvetica, sans-serif;
         background-color: rgba(27, 38, 59, 1);
         border-radius: 0 80px;
         display: flex;
-        width: 50%;
-        height: auto;
+        width: 55%;
+        height: 105vh;
         gap: 20px;
         flex-direction: column;
         align-items: center;
         padding: 20px;
-        left: -77px;
+        z-index: 5;
+
 
         h2{
             font-size: 40px;
