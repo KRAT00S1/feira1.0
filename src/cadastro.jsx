@@ -78,17 +78,15 @@ export default function Cadastro(){
                 </div>  
             </header>
 
-            {/* <div className="logo">
-                    <img src={logo} alt="Logo" height={250}/>
-                </div> */}
-
 
             <main className='fundo_cadastro'>
             
                 <div className="caixa-principal">
 
-                    <img src={centro} className='central' height={600}/>
+                    <div className="central">
                     <img src={cursos} className='logo-feira'/>
+                    </div>
+
 
                     <form onSubmit={handleSubmit} className="cadastro-caixa">
                         <h2>Cadastro</h2>
@@ -171,37 +169,46 @@ export default function Cadastro(){
 
 
 
-{/*
-<footer className="contatos">
-<div className="caixa_instituto">
-<img src={logo} alt="" />
-<h2>Instito Nossa Senhora <br/> de Fatima</h2>
+            <footer className="contatos">
+
+                <div className="caixa_loc">
+
+                    <h4>LOCALIZAÇÃO</h4>
+
+                    <p>Instituto Social Nossa Senhora de Fátima
+                    Av. Cel. Octaviano de Freitas Costa, 463 
+                    Veleiros - São Paulo - SP 04773-000</p>
+                </div>
+                    
+                <hr/>
+
+                <div className="caixa_instituto">
+                    <img src={logo} alt="" />
+                    <h2>Instituto Nossa Senhora <br/> de Fatima</h2>
+                </div>
+                
+                <hr/>
+
+                <div className="redes_sociais">
+                        <h4>CONTATOS</h4>
+                        
+                    <p>(11) 3798-5037 - secretaria<br/>
+                    (11) 96398-6252 - secretaria - whatsapp</p>
+
+                <div className="link_contatos">
+                    <a href="">adm@acaonsfatima.org.br</a>
+                    <a href="">secretaria@acaonsfatima.org.br</a>
+                </div>
+
+
+
 
 </div>
-<hr/>
-<div className="caixa_loc">
 
-  <h4>LOCALIZAÇÃO</h4>
 
-  <p>Instituto Social Nossa Senhora de Fátima
-Av. Cel. Octaviano de Freitas Costa, 463 
-Veleiros - São Paulo - SP 04773-000</p>
 
-</div>
-<hr/>
-<div className="redes_sociais">
+</footer>
 
-  <p>(11) 3798-5037 - secretaria<br/>
-(11) 96398-6252 - secretaria - whatsapp</p>
-
-<div className="link_contatos">
-<a href="">adm@acaonsfatima.org.br</a>
-<a href="">secretaria@acaonsfatima.org.br</a>
-</div>
-</div>
-
-</footer> 
-*/}
 
         </div>
 )}

@@ -461,6 +461,8 @@ hr{
         flex-direction: column;
         justify-content: center;
         gap: 30px;
+        text-align: center;
+        padding: 10px;
 
         h4{
             font-weight: 800;
@@ -477,6 +479,8 @@ hr{
         justify-content: center;
         align-items: center;
         color: #ffffff;    
+        gap: 10px;
+      
         
         img{
             width: 100px;
@@ -498,9 +502,8 @@ hr{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        
-        
-        gap: 30px;
+        text-align: center;
+        gap: 15px;
 
         .link_contatos{
             width: 100%;
@@ -508,6 +511,8 @@ hr{
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            
+
             a{
                 text-decoration: none;
                 color: #2c2f48;
