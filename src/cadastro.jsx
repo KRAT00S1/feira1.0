@@ -1,8 +1,7 @@
 import './index.scss'
 import './cadastro.scss'
 import { Link } from 'react-router'
-
-
+import React, {useState} from 'react';
 
 
 import logo from './assets/images/logo.png'
@@ -11,13 +10,59 @@ import centro from './assets/images/imagem_central.png'
 
 
 
-
 export default function Cadastro(){
+
+    const [nome, setNome] = useState("");
+    const [escolaridade, setEscolaridade] = useState("");
+    const [interesse, setInteresse] = useState("");
+    const [previsao, setPrevisao] = useState("");
+    const [email, setEmail] = useState("");
+    const [sabendo, setSabendo] = useState("");
+    const [exaluno, setExaluno] = useState("");
+    const [telefone, setTelefone] = useState("");
+    const [cpf, setCpf] = useState("");
 
     function handleSubmit(e){
         e.preventDefault();
+        alert("Enviado!");
     }
 
+    function handleNomeChange(event){
+        setNome(event.target.value);
+    }
+    
+    function handleEscolaridadeChange(event){
+        setEscolaridade(event.target.value);
+    }
+
+    function handleInteresseChange(event){
+        setInteresse(event.target.value);
+    }
+
+    function handlePrevisaoChange(event){
+        setPrevisao(event.target.value);
+    }
+
+    function handleEmailChange(event){
+        setEmail(event.target.value);
+    }
+
+    function handleSabendoChange(event){
+        setSabendo(event.target.value);
+    }
+
+    function handleExalunoChange(event){
+        setExaluno(event.target.value);
+    }
+
+    function handleTelefoneChange(event){
+        setTelefone(event.target.value);
+    }
+
+    function handleCpfChange(event){
+        setCpf(event.target.value);
+    }
+    
     return(
         <div> 
             <header>
@@ -45,72 +90,81 @@ export default function Cadastro(){
                     <img src={centro} className='central' height={600}/>
                     <img src={cursos} className='logo-feira'/>
 
-                    <div className="cadastro-caixa">
+                    <form onSubmit={handleSubmit} className="cadastro-caixa">
                         <h2>Cadastro</h2>
 
                         <div className='opcoes'>
                             <form method='post' onSubmit={handleSubmit}>
                                 <label>
-                                    <p>Nome: *</p> <input type="text" placeholder='Nome*'/>
+                                    <p>Nome: *</p> <input type="text" placeholder='Nome*' value={nome} onChange={handleNomeChange}/>
+                                </label>
+
+                                <label>
+                                    <p>Escolaridade:</p>
+                                    <select value={escolaridade} onChange={handleEscolaridadeChange}>
+                                        <option value="" selected disabled>Selecione uma opção</option>
+                                        <option value="Ensino Médio">Ensino Médio</option>
+                                        <option value="Ensino Fundamental">Ensino Fundamental</option>
+                                        <option value="Ensino Superior">Ensino Superior</option>
+                                        <option valeu="Nenhuma das Anteriores">Nenhuma das Anteriores</option>
+                                    </select> 
+                                </label>
+
+                                <label>
+                                    <p>Curso de interesse (se houver):</p>
+                                    <select value={interesse} onChange={handleInteresseChange}>
+                                        <option value="" selected disabled>Selecione uma opção</option>
+                                        <option value="Informática">Informática</option>
+                                        <option value="Administração">Administração</option>
+                                        <option value="Comunicação Visual">Comunicação Visual</option>
+                                        <option value="Inglês">Inglês</option>
+                                        <option value="Eletricista Instalador">Eletricista Instalador</option>
+                                        <option value="Eletromecânica de Autos">Eletromecânica de Autos</option>
+                                    </select> 
+                                </label>
+
+                                <label>
+                                    <p>Previsão de chegada:</p><input type="time" placeholder="Previsão de chegada" value={previsao} onChange={handlePrevisaoChange} />
+                                </label>
+
+                                <label>
+                                    <p>Email:</p> <input type="email" placeholder='Email' value={email} onChange={handleEmailChange}/>
+                                </label>
+
+                                <label>
+                                    <p>Como ficou sabendo da Feira?:</p>
+                                    <select value={sabendo} onChange={handleSabendoChange}>
+                                        <option value="" selected disabled></option>
+                                        <option value="Amigos">Amigos</option>
+                                        <option value="Redes Sociais">Redes Sociais</option>
+                                        <option value="Parentes">Parentes</option>
+                                        <option value="Escola">Escola</option>
+                                    </select> 
+                                </label>
+
+                                <label>
+                                    <p>Já foi aluno do Frei?: *</p>
+                                    <select value={exaluno} onChange={handleExalunoChange}>
+                                        <option value="" selected disabled></option>
+                                        <option value="Sim">Sim</option>
+                                        <option value="Não">Não</option>
+                                    </select>
+                                </label>
+
+                                <label>
+                                    <p>Telefone:</p> <input type="text" placeholder='Telefone' value={telefone} onChange={handleTelefoneChange}/>
                                 </label>
                                 
                                 <label>
-                                    <p>Escolaridade:</p>
-                                    <select>
-                                        <option value="" selected disabled></option>
-                                        <option>Ensino Médio</option>
-                                        <option>Ensino Fundamental</option>
-                                        <option>Ensino Superior</option>
-                                        <option>Nenhuma das Anteriores</option>
-                                    </select> 
+                                    <p>CPF: *</p> <input type="text" placeholder='CPF*' value={cpf} onChange={handleCpfChange}/>
                                 </label>
-                                <label>
-                                    <p>Curso de interesse (se houver):</p>
-                                    <select>
-                                        <option value="" selected disabled></option>
-                                        <option>Informática</option>
-                                        <option>Administração</option>
-                                        <option>Comunicação Visual</option>
-                                        <option>Inglês</option>
-                                        <option>Eletricista Instalador</option>
-                                        <option>Eletromecânica de Autos</option>
-                                    </select> 
-                                </label>
-                                <label>
-                                    <p>Previsão de chegada:</p><input type="datetime" placeholder='Previsão de chegada' />
-                                </label>
-                                <label>
-                                    <p>Email:</p> <input type="email"placeholder='Email' />
-                                </label>
-                                <label>
-                                    <p>Como ficou sabendo da Feira?:</p>
-                                    <select>
-                                        <option value="" selected disabled></option>
-                                        <option>Amigos</option>
-                                        <option>Redes Sociais</option>
-                                        <option>Parentes</option>
-                                        <option>Escola</option>
-                                    </select> 
-                                </label>
-                                <label>
-                                    <p>Já foi aluno do Frei?: *</p>
-                                    <select>
-                                        <option value="" selected disabled></option>
-                                        <option>Sim</option>
-                                        <option>Não</option>
-                                    </select>
-                                </label>
-                                <label>
-                                    <p>Telefone:</p> <input type="text" placeholder='Telefone'/>
-                                </label>
-                                <label>
-                                    <p>CPF: *</p> <input type="text" placeholder='CPF*'/>
-                                </label>
+
                             </form>
                         </div>
 
-                        <button className='cadastrar'>Cadastrar-se</button>
-                    </div>
+                        <button type="submit" className='cadastrar'>Cadastrar-se</button>
+
+                    </form>
                     
                 </div>
             </main>
@@ -118,7 +172,6 @@ export default function Cadastro(){
 
 
 {/*
-
 <footer className="contatos">
 <div className="caixa_instituto">
 <img src={logo} alt="" />
@@ -134,8 +187,6 @@ export default function Cadastro(){
 Av. Cel. Octaviano de Freitas Costa, 463 
 Veleiros - São Paulo - SP 04773-000</p>
 
-
-
 </div>
 <hr/>
 <div className="redes_sociais">
@@ -149,14 +200,8 @@ Veleiros - São Paulo - SP 04773-000</p>
 </div>
 </div>
 
-
 </footer> 
-
 */}
 
-
-</div>
-
-
-    )
-}
+        </div>
+)}
