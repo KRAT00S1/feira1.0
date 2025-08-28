@@ -1,6 +1,6 @@
-import './index.scss'
-import './cadastro.scss'
-import { Link } from 'react-router'
+import './index.scss';
+import './cadastro.scss';
+import { Link } from 'react-router';
 import React, {useState} from 'react';
 
 
@@ -24,7 +24,7 @@ export default function Cadastro(){
 
     function handleSubmit(e){
         e.preventDefault();
-        alert("Enviado!");
+        alert("Cadastrado!");
     }
 
     function handleNomeChange(event){
@@ -88,76 +88,80 @@ export default function Cadastro(){
                     </div>
 
 
-                    <form onSubmit={handleSubmit} className="cadastro-caixa">
+                    <form method='post' onSubmit={handleSubmit} className="cadastro-caixa">
                         <h2>Cadastro</h2>
 
                         <div className='opcoes'>
-                            <form method='post' onSubmit={handleSubmit}>
-                                <label>
-                                    <p>Nome: *</p> <input type="text" placeholder='Nome*' value={nome} onChange={handleNomeChange}/>
-                                </label>
+                            
+                            <label>
+                                <p>Nome: *</p>
+                                <input type="text" placeholder='Nome*' value={nome} onChange={handleNomeChange}/>
+                            </label>
 
-                                <label>
-                                    <p>Escolaridade:</p>
-                                    <select value={escolaridade} onChange={handleEscolaridadeChange}>
-                                        <option value="" selected disabled>Selecione uma opção</option>
-                                        <option value="Ensino Médio">Ensino Médio</option>
-                                        <option value="Ensino Fundamental">Ensino Fundamental</option>
-                                        <option value="Ensino Superior">Ensino Superior</option>
-                                        <option valeu="Nenhuma das Anteriores">Nenhuma das Anteriores</option>
-                                    </select> 
-                                </label>
+                            <label>
+                                <p>Escolaridade:</p>
+                                <select value={escolaridade} onChange={handleEscolaridadeChange}>
+                                    <option value="" selected disabled>Selecione uma opção</option>
+                                    <option value="Ensino Médio">Ensino Médio</option>
+                                    <option value="Ensino Fundamental">Ensino Fundamental</option>
+                                    <option value="Ensino Superior">Ensino Superior</option>
+                                    <option valeu="Nenhuma das Anteriores">Nenhuma das Anteriores</option>
+                                </select> 
+                            </label>
 
-                                <label>
-                                    <p>Curso de interesse (se houver):</p>
-                                    <select value={interesse} onChange={handleInteresseChange}>
-                                        <option value="" selected disabled>Selecione uma opção</option>
-                                        <option value="Informática">Informática</option>
-                                        <option value="Administração">Administração</option>
-                                        <option value="Comunicação Visual">Comunicação Visual</option>
-                                        <option value="Inglês">Inglês</option>
-                                        <option value="Eletricista Instalador">Eletricista Instalador</option>
-                                        <option value="Eletromecânica de Autos">Eletromecânica de Autos</option>
-                                    </select> 
-                                </label>
+                            <label>
+                                <p>Curso de interesse (se houver):</p>
+                                <select value={interesse} onChange={handleInteresseChange}>
+                                    <option value="" selected disabled>Selecione uma opção</option>
+                                    <option value="Informática">Informática</option>
+                                    <option value="Administração">Administração</option>
+                                    <option value="Comunicação Visual">Comunicação Visual</option>
+                                    <option value="Inglês">Inglês</option>
+                                    <option value="Eletricista Instalador">Eletricista Instalador</option>
+                                    <option value="Eletromecânica de Autos">Eletromecânica de Autos</option>
+                                </select> 
+                            </label>
 
-                                <label>
-                                    <p>Previsão de chegada:</p><input type="time" placeholder="Previsão de chegada" value={previsao} onChange={handlePrevisaoChange} />
-                                </label>
+                            <label>
+                                <p>Previsão de chegada:</p>
+                                <input type="time" placeholder="Previsão de chegada" value={previsao} onChange={handlePrevisaoChange} />
+                            </label>
 
-                                <label>
-                                    <p>Email:</p> <input type="email" placeholder='Email' value={email} onChange={handleEmailChange}/>
-                                </label>
+                            <label>
+                                <p>Email:</p>
+                                <input type="email" placeholder='Email' value={email} onChange={handleEmailChange}/>
+                            </label>
 
-                                <label>
-                                    <p>Como ficou sabendo da Feira?:</p>
-                                    <select value={sabendo} onChange={handleSabendoChange}>
-                                        <option value="" selected disabled></option>
-                                        <option value="Amigos">Amigos</option>
-                                        <option value="Redes Sociais">Redes Sociais</option>
-                                        <option value="Parentes">Parentes</option>
-                                        <option value="Escola">Escola</option>
-                                    </select> 
-                                </label>
+                            <label>
+                                <p>Como ficou sabendo da Feira?:</p>
+                                <select value={sabendo} onChange={handleSabendoChange}>
+                                    <option value="" selected disabled></option>
+                                    <option value="Amigos">Amigos</option>
+                                    <option value="Redes Sociais">Redes Sociais</option>
+                                    <option value="Parentes">Parentes</option>
+                                    <option value="Escola">Escola</option>
+                                </select> 
+                            </label>
 
-                                <label>
-                                    <p>Já foi aluno do Frei?: *</p>
-                                    <select value={exaluno} onChange={handleExalunoChange}>
-                                        <option value="" selected disabled></option>
-                                        <option value="Sim">Sim</option>
-                                        <option value="Não">Não</option>
-                                    </select>
-                                </label>
+                            <label>
+                                <p>Já foi aluno do Frei?: *</p>
+                                <select value={exaluno} onChange={handleExalunoChange}>
+                                    <option value="" selected disabled></option>
+                                    <option value="Sim">Sim</option>
+                                    <option value="Não">Não</option>
+                                </select>
+                            </label>
 
-                                <label>
-                                    <p>Telefone:</p> <input type="text" placeholder='Telefone' value={telefone} onChange={handleTelefoneChange}/>
-                                </label>
+                            <label>
+                                <p>Telefone:</p>
+                                <input type="text" placeholder='Telefone' value={telefone} onChange={handleTelefoneChange}/>
+                            </label>
                                 
-                                <label>
-                                    <p>CPF: *</p> <input type="text" placeholder='CPF*' value={cpf} onChange={handleCpfChange}/>
-                                </label>
+                            <label>
+                                <p>CPF: *</p>
+                                <input type="text" placeholder='CPF*' value={cpf} onChange={handleCpfChange}/>
+                            </label>
 
-                            </form>
                         </div>
 
                         <button type="submit" className='cadastrar'>Cadastrar-se</button>
