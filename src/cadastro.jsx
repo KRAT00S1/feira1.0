@@ -3,11 +3,9 @@ import './cadastro.scss';
 import { Link } from 'react-router';
 import React, {useState} from 'react';
 
-
 import logo from './assets/images/logo.png'
 import cursos from './assets/images/cursos.png'
 import centro from './assets/images/imagem_central.png'
-
 
 
 export default function Cadastro(){
@@ -199,20 +197,12 @@ export default function Cadastro(){
                     <p>(11) 3798-5037 - secretaria<br/>
                     (11) 96398-6252 - secretaria - whatsapp</p>
 
-                <div className="link_contatos">
-                    <a href="">adm@acaonsfatima.org.br</a>
-                    <a href="">secretaria@acaonsfatima.org.br</a>
+                    <div className="link_contatos">
+                        <a href="">adm@acaonsfatima.org.br</a>
+                        <a href="">secretaria@acaonsfatima.org.br</a>
+                    </div>
+
                 </div>
-
-
-
-
-</div>
-
-
-
-</footer>
-
-
+            </footer>
         </div>
 )}

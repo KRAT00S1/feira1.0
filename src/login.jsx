@@ -1,5 +1,3 @@
-
-
 import './index.scss';
 import './login.scss';
 import { Link } from 'react-router';
