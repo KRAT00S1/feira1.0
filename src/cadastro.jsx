@@ -19,6 +19,8 @@ export default function Cadastro(){
     const [exaluno, setExaluno] = useState("");
     const [telefone, setTelefone] = useState("");
     const [cpf, setCpf] = useState("");
+    
+    const [dadosUser, setDadosUser] = useState();
 
     
     function handleNomeChange(event){
@@ -59,18 +61,20 @@ export default function Cadastro(){
 
     function handleSubmit(e){
         e.preventDefault();
-        
-        let dadosUser = {nome: {nome},
-            escolaridade: setEscolaridade(escolaridade),
-            interesse: setInteresse(interesse),
-            previsao: setPrevisao(previsao),
-            email: setEmail(email),
-            sabendo: setSabendo(sabendo),
-            exaluno: setExaluno(exaluno),
-            telefone: setTelefone(telefone),
-            cpf: setCpf(cpf)};
 
-            alert(dadosUser);
+        setDadosUser({
+            "nome": nome,
+            "escolaridade": escolaridade,
+            "interesse": interesse,
+            "previsao": previsao,
+            "email": email,
+            "sabendo": sabendo,
+            "exaluno": exaluno,
+            "telefone": telefone,
+            "cpf": cpf
+        });
+
+        alert(dadosUser);
     }
     
     return(
@@ -80,7 +84,7 @@ export default function Cadastro(){
 
                     <div className="principal">
 
-                        <Link to={'/'}><img src={logo} className='logo' /></Link>
+                        <Link to={'/'}><img src={logo} className='logo'/></Link>
                         <h1>Instituto Nossa Senhora de Fátima</h1>   
 
                     </div>
@@ -176,7 +180,6 @@ export default function Cadastro(){
 
                         <button type="submit" className='cadastrar'>Cadastrar-se</button>
 
-
                     </form>
                 </div>
             </main>
@@ -189,8 +192,8 @@ export default function Cadastro(){
 
                     <h4>LOCALIZAÇÃO</h4>
 
-                    <p>Instituto Social Nossa Senhora de Fátima
-                    Av. Cel. Octaviano de Freitas Costa, 463 
+                    <p>Instituto Social Nossa Senhora de Fátima <br/>
+                    Av. Cel. Octaviano de Freitas Costa, 463 <br/>
                     Veleiros - São Paulo - SP 04773-000</p>
                 </div>
                     
@@ -218,3 +221,4 @@ export default function Cadastro(){
             </footer>
         </div>
 )}
+
