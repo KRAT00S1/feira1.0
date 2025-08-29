@@ -20,11 +20,7 @@ export default function Cadastro(){
     const [telefone, setTelefone] = useState("");
     const [cpf, setCpf] = useState("");
 
-    function handleSubmit(e){
-        e.preventDefault();
-        alert("Cadastrado!");
-    }
-
+    
     function handleNomeChange(event){
         setNome(event.target.value);
     }
@@ -32,33 +28,49 @@ export default function Cadastro(){
     function handleEscolaridadeChange(event){
         setEscolaridade(event.target.value);
     }
-
+    
     function handleInteresseChange(event){
         setInteresse(event.target.value);
     }
-
+    
     function handlePrevisaoChange(event){
         setPrevisao(event.target.value);
     }
-
+    
     function handleEmailChange(event){
         setEmail(event.target.value);
     }
-
+    
     function handleSabendoChange(event){
         setSabendo(event.target.value);
     }
-
+    
     function handleExalunoChange(event){
         setExaluno(event.target.value);
     }
-
+    
     function handleTelefoneChange(event){
         setTelefone(event.target.value);
     }
-
+    
     function handleCpfChange(event){
         setCpf(event.target.value);
+    }
+
+    function handleSubmit(e){
+        e.preventDefault();
+        
+        let dadosUser = {nome: {nome},
+            escolaridade: setEscolaridade(escolaridade),
+            interesse: setInteresse(interesse),
+            previsao: setPrevisao(previsao),
+            email: setEmail(email),
+            sabendo: setSabendo(sabendo),
+            exaluno: setExaluno(exaluno),
+            telefone: setTelefone(telefone),
+            cpf: setCpf(cpf)};
+
+            alert(dadosUser);
     }
     
     return(
@@ -164,8 +176,8 @@ export default function Cadastro(){
 
                         <button type="submit" className='cadastrar'>Cadastrar-se</button>
 
+
                     </form>
-                    
                 </div>
             </main>
 
