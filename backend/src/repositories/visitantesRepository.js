@@ -1,8 +1,9 @@
-import connection from '../connection.js';
+import { connection } from "./connection.js";
+
 
 export async function inserirVisitante(novoVisitante) {
-    comando = `
-    INSERT INTO visitantes_tb
+    const comando = `
+    INSERT INTO visitantes_tb (nome, escolaridade, interesse, previsao_chegada, email, sabendo_feira, telefone, ex_aluno, cpf)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
     `
 
@@ -17,4 +18,5 @@ export async function inserirVisitante(novoVisitante) {
         novoVisitante.ex_aluno,
         novoVisitante.cpf
     ]);
+    return info.insertId
 }

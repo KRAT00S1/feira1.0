@@ -1,8 +1,10 @@
-import { adicionarRotas } from "./routes.js";
+import { adicionarRotas } from "./rotas.js";
 import express from 'express';
+import cors from 'cors'
 
 const api = express();
 api.use(express.json());
+api.use(cors())
 
 adicionarRotas(api);
 
