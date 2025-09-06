@@ -10,7 +10,7 @@ import api from './api.js';
 
 
 export default function Cadastro(){
-
+    const [visitantes, setVisitantes] = useState([])
     const [nome, setNome] = useState("");
     const [escolaridade, setEscolaridade] = useState("");
     const [interesse, setInteresse] = useState("");
@@ -21,8 +21,13 @@ export default function Cadastro(){
     const [telefone, setTelefone] = useState("");
     const [cpf, setCpf] = useState("");
 
+    async function Registro() {
+        await api.get('/visitante')
+            .then(resposta => setVisitantes(resposta.data ))
+    }
+
     async function Cadastrar(event) {
-        event.preventDefault();
+        
         await api.post('/visitante', {
             "nome": nome,
             "escolaridade": escolaridade,
@@ -186,6 +191,14 @@ export default function Cadastro(){
 
         </div>
             </footer>
+            <button onClick={Registro}>oiknjisonfisn</button>
+
+            {visitantes.map(visitante =>{
+                return <div>
+                    <h1>{visitante.nome}</h1>
+                    <p>{visitante.escolaridade}</p>
+                </div>
+            })}
         </div>
 )}
 

@@ -11,12 +11,23 @@ export async function inserirVisitante(novoVisitante) {
         novoVisitante.nome,
         novoVisitante.escolaridade,
         novoVisitante.interesse,
-        novoVisitante.previsao_chegada,
+        novoVisitante.previsao,
         novoVisitante.email,
-        novoVisitante.sabendo_feira,
+        novoVisitante.sabendo,
         novoVisitante.telefone,
-        novoVisitante.ex_aluno,
+        novoVisitante.exaluno,
         novoVisitante.cpf
     ]);
     return info.insertId
+}
+
+
+export async function Listar() {
+const comando = `
+Select * from visitantes_tb
+
+`    
+
+const [res] = await connection.query(comando)
+return res
 }

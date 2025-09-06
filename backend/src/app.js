@@ -8,4 +8,4 @@ api.use(cors())
 
 adicionarRotas(api);
 
-api.listen(5010, () => console.log('API subiu...'));
+api.listen(8010, () => console.log('API subiu...'));
