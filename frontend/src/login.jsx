@@ -4,25 +4,35 @@ import { Link } from 'react-router';
 import React, {useState} from 'react';
 import logo from './assets/images/logo.png';
 import curso from './assets/images/cursos.png';
+import api from './api.js';
 
 
 
 export default function Login(){
     
-    const [usuario, setUsuario] = useState("");
-    const [senha, setSenha] = useState("");
+    const [formData, setFormData] = useState({
+        email: '',
+        senha: ''
+    });
     
-    function handleSubmit(e){
+
+    const handleChange = (e) => {
+        setFormData({ ...formData, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = async (e) => {
         e.preventDefault();
-    }
-    
-    function handleUsuarioChange(e){
-        setUsuario(e.target.value);
-    }
-    
-    function handleSenhaChange(e){
-        setSenha(e.target.value);
-    }
+        const dataToSend = {
+            ...formData,
+        };
+        try {
+            await api.post('/login', dataToSend);
+            alert('Logado!');
+            console.log(formData);
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     
     return(
@@ -45,22 +55,22 @@ export default function Login(){
                     <div className="container-principal">
                     
                         <div className="container-sobreposisao">
-                            <div className="container-campos">
+                            <form className="container-campos" onSubmit={handleSubmit}>
                         
                                 <h1>LOGIN</h1>
 
                                 <label>
                                     <p>Usuário:</p>
-                                    <input className='nome' type="text" placeholder='Usuário' value={usuario} onChange={handleUsuarioChange}/>
+                                    <input className='nome' type="text" placeholder='Usuário' name='email' value={formData.email} onChange={handleChange}/>
                                 </label>
 
                                 <label>
                                     <p>Senha:</p>
-                                    <input className='senha' type="password" placeholder='Inserir senha' id="" value={senha} onChange={handleSenhaChange}/>
+                                    <input className='senha' type="password" placeholder='Inserir senha' name='senha' value={formData.senha} onChange={handleChange}/>
                                 </label>
 
                                 <button type="submit" className='cadastrar'>Entrar</button>
-                            </div>
+                            </form>
                         </div>
                         <div className="container-imagem">
                             <img className='container-curso' src={curso} alt="" /> 
