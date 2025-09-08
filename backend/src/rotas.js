@@ -1,7 +1,6 @@
-import visitanteController from './controllers/visitantesController.js';
+import visitantesController from './controllers/visitantesController.js';
 
 
 export function adicionarRotas (api) {
-    api.use(visitanteController);
-
+    api.use(visitantesController);
 }
