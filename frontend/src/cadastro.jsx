@@ -10,43 +10,39 @@ import api from './api.js';
 
 
 export default function Cadastro(){
-    const [visitantes, setVisitantes] = useState([])
-    const [nome, setNome] = useState("");
-    const [escolaridade, setEscolaridade] = useState("");
-    const [interesse, setInteresse] = useState("");
-    const [previsao, setPrevisao] = useState("");
-    const [email, setEmail] = useState("");
-    const [sabendo, setSabendo] = useState("");
-    const [exaluno, setExaluno] = useState("");
-    const [telefone, setTelefone] = useState("");
-    const [cpf, setCpf] = useState("");
 
-    async function Registro() {
-        await api.get('/visitante')
-            .then(resposta => setVisitantes(resposta.data ))
-    }
-
-    async function Cadastrar(event) {
+        const [formData, setFormData] = useState({
+            nome: '',
+            escolaridade: '',
+            interesse: '',
+            previsao: '',
+            email: '',
+            sabendo: '',
+            exaluno: '',
+            telefone: '',
+            cpf: ''
+        });
         
-        await api.post('/visitante', {
-            "nome": nome,
-            "escolaridade": escolaridade,
-            "interesse": interesse,
-            "previsao": previsao,
-            "email": email,
-            "sabendo": sabendo,
-            "exaluno": exaluno,
-            "telefone": telefone,
-            "cpf": cpf
-        }).then(() => alert('Cadastro realizado!'))
-          .catch(e => {
-              if(e.response && e.response.data && e.response.data.erro){
-                  alert(e.response.data.erro);
-              } else {
-                  alert('Erro ao cadastrar visitante.');
-              }
-          });
-    }
+
+        const handleChange = (e) => {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
+
+        const handleSubmit = async (e) => {
+            e.preventDefault();
+            const dataToSend = {
+                ...formData,
+                exaluno: formData.exaluno === 'Sim' ? 1 : 0
+            };
+            try {
+                await api.post('/cadastro', dataToSend);
+                alert('Cadastrado!');
+                console.log(formData);
+            } catch (err) {
+                console.log(err);
+            }
+        };
+    
     
     return(
 <div> 
@@ -56,11 +52,11 @@ export default function Cadastro(){
             <div className="principal">
 
                 <Link to={'/'}><img src={logo} className='logo'/></Link>
-                <h1>Instituto Nossa Senhora de Fátima</h1>   
+                <h1>Instituto Nossa Senhora de Fátima</h1>
 
             </div>
 
-        </div>  
+        </div>
     </header>
 
 
@@ -73,19 +69,19 @@ export default function Cadastro(){
             </div>
 
 
-            <form method='post'  className="cadastro-caixa">
+            <form className="cadastro-caixa" onSubmit={handleSubmit}>
                 <h2>Cadastro</h2>
 
                 <div className='opcoes'>
                     
                     <label>
                         <p>Nome: *</p>
-                        <input type="text" placeholder='Nome*' value={nome} onChange={(e)=>setNome(e.target.value)}/>
+                        <input type="text" placeholder='Nome*' name="nome" value={formData.nome} onChange={handleChange}/>
                     </label>
 
                     <label>
                         <p>Escolaridade:</p>
-                        <select value={escolaridade} onChange={(e) => setEscolaridade(e.target.value)}>
+                        <select name="escolaridade" value={formData.escolaridade} onChange={handleChange}>
                             <option value="" selected disabled>Selecione uma opção</option>
                             <option value="Ensino Médio">Ensino Médio</option>
                             <option value="Ensino Fundamental">Ensino Fundamental</option>
@@ -96,7 +92,7 @@ export default function Cadastro(){
 
                     <label>
                         <p>Curso de interesse (se houver):</p>
-                        <select value={interesse} onChange={(e) => setInteresse(e.target.value)}>
+                        <select name="interesse" value={formData.interesse} onChange={handleChange}>
                             <option value="" selected disabled>Selecione uma opção</option>
                             <option value="Informática">Informática</option>
                             <option value="Administração">Administração</option>
@@ -109,17 +105,17 @@ export default function Cadastro(){
 
                     <label>
                         <p>Previsão de chegada:</p>
-                        <input type="time" placeholder="Previsão de chegada" value={previsao} onChange={(e)=>setPrevisao(e.target.value)} />
+                        <input type="time" placeholder="Previsão de chegada" name="previsao" value={formData.previsao} onChange={handleChange}/>
                     </label>
 
                     <label>
                         <p>Email:</p>
-                        <input type="email" placeholder='Email' value={email} onChange={(e)=> setEmail(e.target.value)}/>
+                        <input type="email" placeholder='Email' name="email" value={formData.email} onChange={handleChange}/>
                     </label>
 
                     <label>
                         <p>Como ficou sabendo da Feira?:</p>
-                        <select value={sabendo} onChange={(e)=>setSabendo(e.target.value)}>
+                        <select name="sabendo" value={formData.sabendo} onChange={handleChange}>
                             <option value="" selected disabled></option>
                             <option value="Amigos">Amigos</option>
                             <option value="Redes Sociais">Redes Sociais</option>
@@ -130,7 +126,7 @@ export default function Cadastro(){
 
                     <label>
                         <p>Já foi aluno do Frei?: *</p>
-                        <select value={exaluno} onChange={(e)=>setExaluno(e.target.value)}>
+                        <select name="exaluno" value={formData.exaluno} onChange={handleChange}>
                             <option value="" selected disabled></option>
                             <option value="Sim">Sim</option>
                             <option value="Não">Não</option>
@@ -139,23 +135,21 @@ export default function Cadastro(){
 
                     <label>
                         <p>Telefone:</p>
-                        <input type="text" placeholder='Telefone' value={telefone} onChange={(e)=>setTelefone(e.target.value)}/>
+                        <input type="text" placeholder='Telefone' name="telefone" value={formData.telefone} onChange={handleChange}/>
                     </label>
                         
                     <label>
                         <p>CPF: *</p>
-                        <input type="text" placeholder='CPF*' value={cpf} onChange={(e)=>setCpf(e.target.value)
-                        }/>
+                        <input type="text" placeholder='CPF*' name="cpf" value={formData.cpf} onChange={handleChange}/>
                     </label>
 
                 </div>
 
-                <button type='button' className='cadastrar' onClick={Cadastrar}>Cadastrar-se</button>
+                <button type='submit' className='cadastrar'>Cadastrar-se</button>
 
             </form>
         </div>
     </main>
-
 
 
     <footer className="contatos">
@@ -191,14 +185,5 @@ export default function Cadastro(){
 
         </div>
             </footer>
-            <button onClick={Registro}>oiknjisonfisn</button>
-
-            {visitantes.map(visitante =>{
-                return <div>
-                    <h1>{visitante.nome}</h1>
-                    <p>{visitante.escolaridade}</p>
-                </div>
-            })}
         </div>
 )}
-

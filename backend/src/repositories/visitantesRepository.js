@@ -3,7 +3,7 @@ import { connection } from "./connection.js";
 
 export async function inserirVisitante(novoVisitante) {
     const comando = `
-    INSERT INTO visitantes_tb (nome, escolaridade, interesse, previsao_chegada, email, sabendo_feira, telefone, ex_aluno, cpf)
+    INSERT INTO visitante_tb (nome, escolaridade, interesse, previsao_chegada, email, sabendo_feira, telefone, ex_aluno, cpf)
     VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?);
     `
 
@@ -24,7 +24,7 @@ export async function inserirVisitante(novoVisitante) {
 
 export async function Listar() {
 const comando = `
-Select * from visitantes_tb
+Select * from visitante_tb
 
 `    
 
