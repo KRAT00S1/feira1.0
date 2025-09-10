@@ -1,6 +1,9 @@
 import * as repo from '../repositories/visitantesRepository.js';
 import { Router } from "express";
 
+import {getAuthentication} from '../utils/jwt.js'
+const autenticador = getAuthentication();
+
 const api = Router();
 
 api.post('/cadastro', async (req, res) => {
@@ -14,4 +17,4 @@ api.post('/cadastro', async (req, res) => {
   }
 });
 
-export default api
+export default api;

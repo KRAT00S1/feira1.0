@@ -3,15 +3,26 @@ import * as repo from '../repositories/loginRepository.js';
 import { Router } from "express";
 const api = Router();
 
-api.post('/login', async (req, res) => {
-  try {
-    console.log(req.body);
-    await repo.criarLogin(req.body);
-    res.status(201).send({ message: 'Login realizado com sucesso!' });
-  } catch (error) {
-    console.error(error);
-    res.status(500).send({ error: 'Erro ao cadastrar.' });
-  }
+api.post('/login/conta', async (req, resp) => {
+  let novoLogin = req.body;
+
+  let id = await repo.criarLogin(novoLogin);
+  resp.send({novoId: id});
 });
 
-export default api
+api.post('/login', async (req, resp) => {
+  let email = req.body.email;
+  let senha = req.body.senha;
+
+  let credenciais = await repo.consultarCredenciais(email, senha);
+
+  if (!credenciais) {
+    resp.status(401).send({erro: 'Credenciais inválidas.'});
+  }
+  else {
+    resp.send({token: generateToken(credenciais)}); 
+  }
+
+})
+
+export default api;
