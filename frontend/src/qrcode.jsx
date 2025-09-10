@@ -5,10 +5,11 @@ import './qrcode.scss'
 
 
 export default function qrcode(){
+
     return(
 
-<div>
-        <header>
+        <div>
+            <header>
                 <div className="cabecalho">
                     <div className="principal">
                         <Link to={'/'}><img src={logo} className='logo' /></Link>
@@ -17,19 +18,17 @@ export default function qrcode(){
                 </div>
             </header> 
 
-<div className="container-primario">
-    
+            <div className="container-primario">
+                
+                <form className="container-qrcode" onSubmit={handleSubmit}>
 
-    <div className="container-qrcode">
+                    <input type="text" name="cpf" value={formData.cpf} onChange={handleChange}/>
 
-    </div>
+                </form>
 
-</div>
+            </div>
 
-
-</div>
-
-
+        </div>
 
     )
 }
