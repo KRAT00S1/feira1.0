@@ -12,7 +12,6 @@ api.post('/login/conta', async (req, resp) => {
   resp.send({ novoId: id });
 })
 
-
 api.post('/login', async (req, resp) => {
   let email = req.body.email;
   let senha = req.body.senha;
@@ -30,6 +29,5 @@ api.post('/login', async (req, resp) => {
     });
   }
 })
-
 
 export default api;

@@ -139,8 +139,8 @@ export default function Cadastro(){
                     </label>
                         
                     <label>
-                        <p>CPF: *</p>
-                        <input type="text" placeholder='CPF*' name="cpf" value={formData.cpf} onChange={handleChange}/>
+                        <p>CPF: *   (Apenas números)</p>
+                        <input type="text" pattern="[0-9]*" placeholder='CPF*' name="cpf" value={formData.cpf} onChange={handleChange}/>
                     </label>
 
                 </div>
