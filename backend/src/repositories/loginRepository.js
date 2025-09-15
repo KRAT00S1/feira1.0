@@ -1,7 +1,5 @@
 import { connection } from "./connection.js";
 
-
-
 export async function consultarCredenciais(email, senha) {
   const comando = `
     SELECT id_admin,
