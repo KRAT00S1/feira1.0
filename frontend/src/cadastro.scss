@@ -110,7 +110,6 @@
     }
 
 
-    
 
     .cadastrar{
         background-color: orangered;
@@ -123,21 +122,15 @@
         font-weight: 600;
         color: white;
         transition: all 0.5s;
-        }
-        .cadastrar:hover{
-            
-            background-color: rgb(236, 69, 8);
-            cursor: pointer;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-            transform: scale(1.05);
-
-
-
-        
     }
 
-
-
+    .cadastrar:hover{
+        
+        background-color: rgb(236, 69, 8);
+        cursor: pointer;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        transform: scale(1.05);
+    }
         }
 
     }
